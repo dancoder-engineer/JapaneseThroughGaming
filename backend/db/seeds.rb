@@ -477,12 +477,232 @@ Vocabword.create({
 ################################################################################################
 ################################################################################################
 
+Lesson.create({
+    title: "The Legend of Zelda: Link's Awakening",
+    isgame: true
+})
 
+Gamesection.create({
+    lesson_id: 3
+})
+
+Release.create({
+    gamesection_id: 3,
+    system: "Game Boy",
+    date: "June 6, 1993"
+})
+
+Release.create({
+    gamesection_id: 3,
+    system: "Game Boy Color",
+    date: "December 12, 1998"
+})
+
+Release.create({
+    gamesection_id: 3,
+    system: "Switch",
+    date: "September 20, 2019"
+})
+
+Cover.create({
+    front: "https://i.imgur.com/Xe9W0pP.jpg", 
+    back: "https://imgur.com/7qIzY4Z.jpg",
+    titlescreen: "https://imgur.com/HAKRjFU.jpg",
+    gamesection_id: 3
+})
+
+Otherpic.create({
+    pic: "https://imgur.com/f5uyish.jpg",
+    caption: "Despite being made all the way back in 1993, in 'creamed spinach color' (in the immortal words of the competition's advertising,) Link's Awakening stands as a strong competitor for the title os best Zelda game to this day.",
+    cover_id: 3
+})
+
+
+Otherpic.create({
+    pic: "https://imgur.com/s1Yto6a.jpg",
+    caption: "The coloring in this picture from the manual seems muted, almost faded, but upon finishing the game, you realize just how appropriate that is.",
+    cover_id: 3
+})
+
+Paragraph.create({
+    gamesection_id: 3,
+    text: "The Legend of Zelda: Link's Awakening (The Dreaming Island in Japan, see the Japanese lesson for further details on that,) is one of the best games the Zelda series has ever produced. The reason for this is fairly obvious, while most games are produced as someone's 9-5 job, this one was a labor of love. The team behind it developed the game after work while working on other things during the day, and the fun they had working on it comes across while playing it. This sort of development also happened on another game that's considered a masterpiece, Mega Man 2.",
+})
+
+Paragraph.create({
+    gamesection_id: 3,
+    text: "The story involves the same Link from Link to the Past getting shipwrecked on an island to the south of Hyrule, where he can't leave unless he wakes the island's deity, known as the Wind Fish. The story takes a major turn around Level 6 that recontextualizes everything and forces Link to make a major decision about the right way to proceed, culminating in an ending with levels of emotion you didn't really see in 8-bit RPGs (except Final Fantasy Adventure.)",
+})
+
+Paragraph.create({
+    gamesection_id: 3,
+    text: "Of course, the best thing about this game's story are the individual characters you'll meet along the way and the cool moments that stick with you. For example, if you can't afford the (really expensive) bow, you can steal it from the shop. If you do this, the next time you go into the store, the store owner will zap you with lightning, killing you outright, and everyone in the game will call you THIEF instead of your name.",
+})
+
+Paragraph.create({
+    gamesection_id: 3,
+    text: "Back in 1993, when you bought a handheld game, you tended to get a scaled down version of its home console equivalent. This is, of course, because of a major difference in technology between a 4 color Game Boy and a 16-bit powerhouse Super NES. Link's Awakening, however, does not scale down the gameplay of Link to the Past at all. Because of this, Link's Awakening easily qualifies as a top 10 Game Boy game. The game is even loved enough to have gotten a remake on the Switch, which is something no one would have guessed would happen.",
+})
+
+Paragraph.create({
+    gamesection_id: 3,
+    text: "The not toned down gameplay did have one caveat, however. If you ask most people what Link's Awakening's major drawback is, they'll tell you that you have to switch items a lot. While this can be annoying, this was unavoidable. In Link to the Past, you had three action buttons in game: A sword button, an button that lets you use an item of your choosing, and one that has many common actions mapped to it (lifting items, dashing etc.) The Game Boy only had two buttons to work with, so they made both of them use items that you select, and made the sword, the dash boots, the power glove, and many others items that you map to those buttins at will. This forces the player to open the menu and switch items far more than in other Zelda games, which can be annoying, but was a fair compromise, and honestly the only way they could've made this game without scaling back the gameplay to Zelda 1 levels.",
+})
+
+Paragraph.create({
+    gamesection_id: 3,
+    text: "The soundtrack by Kazumi Totaka, Minako Hamano, and Kozue Ishikawa is excellent, boasting many amazing tracks. Highlights include the Face Shrine, the Wind Fish's Egg, and of course the Ballad of the Wind Fish (which even got lyrics in the Switch remake.) The only weak link is the Angler's Tunnel theme. Back in the day, I was really enjoying the level themes, and by the time I was going for level 4, I was looking forward to them. Then I entered level 4 and heard a sped up version of the cave theme. This was probably one of the most disappointing musical experiences of my young life. It's only one song, but the disappointment was memorable enough to leave an impression on me.",
+})
+
+Paragraph.create({
+    gamesection_id: 3,
+    text: "Link's Awakening is a true classic, and deserves to be played by any fan of the Zelda series, whether they were born in 1993 or not. And for my fellow old geezers, the game is 28 years old now, so there many Zelda fans that weren't born when we were screwing up our eyesight for life staring at that unlit 4 color screen for hours on end.",
+})
+
+Paragraph.create({
+    gamesection_id: 3,
+    text: "And one more thing, the next time you're playing Ocarina of Time, don't forget to lose to the final boss so that this and Link to the Past (the best Zelda games) come to pass.",
+})
+
+Screenshot.create({
+    url: "https://i.imgur.com/qHQd8pR.png",
+    caption: "No!!! Not the owl!!! Aaaaah, shut up, shut up, SHUT UP!!!!! Actually, he's not as annoying in this game. He serves more as a form of exposition than one of obnoxious tutorials.",
+    gamesection_id: 3
+})
+
+Screenshot.create({
+    url: "https://i.imgur.com/HbJNu5I.png",
+    caption: "Stealing in this game is one of the more memorable cheats in gaming, due to the fact that it has interesting consequences. Of course, I also wonder if this shopkeeper is in the mafia with the way he treats people who steal from him.",
+    gamesection_id: 3
+})
+
+Screenshot.create({
+    url: "https://i.imgur.com/G0eOI0v.png",
+    caption: "This game did the Nintendo characters crossover thing way before Smash. You'll Yoshi, Mario, and even a visitor from SimCity.",
+    gamesection_id: 3
+})
+
+Japanesesection.create({
+    lesson_id: 3,
+    lessontitle: "Relative Clauses",
+    shortdescription: "V dict. form + N",
+    screenshot: "https://i.imgur.com/4WUH9I7.jpg",
+})
+
+Howtomake.create({
+    text:"Verb phrase ending in dictionary form + Noun",
+    japanesesection_id: 3
+})
+
+Japanesecopyparagraph.create({
+    text: "For this Japanese lesson, we don't have to play far, because we're using the game's title itself! That title being 夢を見る島　(ゆめをみる　しま.) This may look strange if you've never seen the grammar before, but it's not that hard. This is actually a relative clause.",
+    japanesesection_id: 3
+})
+
+Japanesecopyparagraph.create({
+    text: "This is actually really simple. The title means 'The island THAT dreams.' Note that we start the phrase with THAT (or who or which) in English. What we do in Japanese is we take out the word that starts the relative clause, and move everything after it to the beginning of the noun phrase, changing any verbs to their dictionary or short forms (we don't use the ました form for example, just the た form for past tense.)",
+    japanesesection_id: 3
+})
+
+Japanesecopyparagraph.create({
+    text: "For example, for 'The Island that Dreams,' we:",
+    japanesesection_id: 3
+})
+
+Japanesecopyparagraph.create({
+    text: "Remove the preposition ‘The Island     Dreams’",
+    japanesesection_id: 3
+})
+
+Japanesecopyparagraph.create({
+    text: "Move everything after to it to the beginning ‘Dreams   The Island’",
+    japanesesection_id: 3
+})
+
+Japanesecopyparagraph.create({
+    text: "Translate this to Japanese, making sure to use the dictionary form of the verb ‘ゆめをみる　しま.’",
+    japanesesection_id: 3
+})
+
+Example.create({
+    title: "",
+    box: "",
+    kanji:"夢を見る島",
+    nokanji: "ゆめをみるしま",
+    english: "The Island that Dreams",
+    japanesesection_id: 3
+})
+
+Example.create({
+    title: "Romancing SaGa 3",
+    box: "https://upload.wikimedia.org/wikipedia/en/e/ee/Rmns3box.jpg",
+    kanji:"破壊するもの",
+    nokanji: "はかいするもの",
+    english: "Destroyer",
+    japanesesection_id: 3
+})
+
+Example.create({
+    title: "Akumajou Densetsu",
+    box: "https://upload.wikimedia.org/wikipedia/en/9/95/Castlevania_III_Dracula%27s_Curse.jpg",
+    kanji:"真正バンパイアハンターとよばれる　ベルモンド家...",
+    nokanji: "しんせいバンパイアハンターとよばれる　ベルモンドか...",
+    english: "The Belmondo family, who are called true vampire hunters...",
+    japanesesection_id: 3
+})
+
+Vocabword.create({
+    kanji: "夢",
+    nokanji: "ゆめ",
+    english: "Dream (noun)",
+    japanesesection_id: 3
+})
+
+Vocabword.create({
+    kanji: "夢を見る",
+    nokanji: "ゆめをみる",
+    english: "Dream (verb) *note the verb used is ‘see.’",
+    japanesesection_id: 3
+})
+
+Vocabword.create({
+    kanji: "破壊する",
+    nokanji: "はかいする",
+    english: "Destroy",
+    japanesesection_id: 3
+})
+
+Vocabword.create({
+    kanji: "物",
+    nokanji: "もの",
+    english: "Thing (nonliving)",
+    japanesesection_id: 3
+})
+
+Vocabword.create({
+    kanji: "者",
+    nokanji: "もの",
+    english: "Thing (living)",
+    japanesesection_id: 3
+})
+
+Vocabword.create({
+    kanji: "真正",
+    nokanji: "しんせい",
+    english: "True",
+    japanesesection_id: 3
+})
+
+Vocabword.create({
+    kanji: "呼ぶ",
+    nokanji: "よぶ",
+    english: "Call",
+    japanesesection_id: 3
+})
 
 
 
 =begin
-
 
 Lesson.create({
     title: "",
@@ -531,7 +751,7 @@ Japanesesection.create({
 })
 
 Howtomake.create({
-    text:",
+    text:"",
     japanesesection_id: 2
 })
 
