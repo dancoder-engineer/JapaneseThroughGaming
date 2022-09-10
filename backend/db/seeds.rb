@@ -483,6 +483,78 @@ Vocabword.create({
 
 =begin
 
+
+Lesson.create({
+    title: "",
+    isgame: true
+})
+
+Gamesection.create({
+    lesson_id: 2
+})
+
+Release.create({
+    gamesection_id: 2,
+    system: "",
+    date: ""
+})
+
+Cover.create({
+    front: "", 
+    back: "",
+    titlescreen: "",
+    gamesection_id: 2
+})
+
+Otherpic.create({
+    pic: "",
+    caption: "",
+    cover_id: 2
+})
+
+Paragraph.create({
+    gamesection_id: 2,
+    text: ""
+})
+
+Screenshot.create({
+    url: "",
+    caption: "",
+    gamesection_id: 2
+})
+
+Japanesesection.create({
+    lesson_id: 2,
+    lessontitle: "",
+    shortdescription: "",
+    screenshot: "",
+})
+
+Howtomake.create({
+    text:",
+    japanesesection_id: 2
+})
+
+Howtomake.create({
+    text:"",
+    japanesesection_id: 2
+})
+
+Japanesecopyparagraph.create({
+    text: "",
+    japanesesection_id: 2
+})
+
+
+Example.create({
+    title: "",
+    box: "",
+    kanji:"",
+    nokanji: "",
+    english: "",
+    japanesesection_id: 2
+})
+
 Vocabword.create({
     kanji: "",
     nokanji: "",
