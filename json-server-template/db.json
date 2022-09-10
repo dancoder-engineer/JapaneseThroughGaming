@@ -1,0 +1,544 @@
+{
+  "users": [
+    {
+      "userName": "DanSensei",
+      "password": "DanSensei",
+      "email": "danseminara@yahoo.com",
+      "paidHowFar": 1,
+      "canBeGraded": true,
+      "quizzes": {
+        "quiz1": {
+          "id": 1,
+          "mcScore": 100,
+          "freeResponse": [
+            {
+              "userName": "DanSensei",
+              "id": [
+                1,
+                1
+              ],
+              "question": "Translate to Japanese: That dress is ugly and expensive, so don't buy it!",
+              "answer": "あのドレスはダサくて高いから買うなよ！",
+              "noOfPeerGrades": 2,
+              "correctPeerGrades": 0
+            },
+            {
+              "userName": "DanSensei",
+              "id": [
+                1,
+                2
+              ],
+              "question": "Translate to Japanese: The phone I'm buying tomorrow is easy to use.",
+              "answer": "明日買う携帯は使いやすいです。",
+              "noOfPeerGrades": 3,
+              "correctPeerGrades": 1
+            }
+          ]
+        }
+      },
+      "id": 1
+    },
+    {
+      "userName": "HaoSeminara",
+      "password": "HaoSeminara",
+      "email": "danseminara@gmail.com",
+      "paidHowFar": 1,
+      "canBeGraded": true,
+      "quizzes": {
+        "quiz1": {
+          "id": 1,
+          "mcScore": 38,
+          "freeResponse": [
+            {
+              "userName": "HaoSeminara",
+              "id": [
+                1,
+                1
+              ],
+              "question": "Translate to Japanese: That dress is ugly and expensive, so don't buy it!",
+              "answer": "那个春子又丑又贵所以别买！",
+              "noOfPeerGrades": 5,
+              "correctPeerGrades": 0
+            },
+            {
+              "userName": "HaoSeminara",
+              "id": [
+                1,
+                2
+              ],
+              "question": "Translate to Japanese: The phone I'm buying tomorrow is easy to use.",
+              "answer": "明天买的手机好用。",
+              "noOfPeerGrades": 4,
+              "correctPeerGrades": 0
+            }
+          ]
+        }
+      },
+      "id": 2
+    },
+    {
+      "userName": "Testtt",
+      "password": "Testtt",
+      "email": "Testtt",
+      "paidHowFar": 1,
+      "canBeGraded": false,
+      "quizzes": {
+        "quiz1": {
+          "id": 1,
+          "mcScore": 0,
+          "freeResponse": [
+            {
+              "userName": "Testtt",
+              "id": [
+                1,
+                1
+              ],
+              "question": "Translate to Japanese: That dress is ugly and expensive, so don't buy it!",
+              "answer": "gf",
+              "noOfPeerGrades": 0,
+              "correctPeerGrades": 0
+            },
+            {
+              "userName": "Testtt",
+              "id": [
+                1,
+                2
+              ],
+              "question": "Translate to Japanese: The phone I'm buying tomorrow is easy to use.",
+              "answer": "tr",
+              "noOfPeerGrades": 0,
+              "correctPeerGrades": 0
+            }
+          ]
+        },
+        "quiz2": {
+          "id": 2,
+          "mcScore": 99,
+          "freeResponse": [
+            {
+              "userName": "Testtt",
+              "id": [
+                1,
+                1
+              ],
+              "question": "Translate to Japanese: That dress is ugly and expensive, so don't buy it!",
+              "answer": "これは答えじゃない！",
+              "noOfPeerGrades": 0,
+              "correctPeerGrades": 0
+            },
+            {
+              "userName": "Testtt",
+              "id": [
+                1,
+                2
+              ],
+              "question": "Translate to Japanese: The phone I'm buying tomorrow is easy to use.",
+              "answer": "俺はバカだよ！！",
+              "noOfPeerGrades": 0,
+              "correctPeerGrades": 0
+            }
+          ]
+        }
+      },
+      "id": 3
+    },
+    {
+      "userName": "Testttt",
+      "password": "Testttt",
+      "email": "Testttt",
+      "paidHowFar": 1,
+      "canBeGraded": true,
+      "quizzes": {
+        "quiz1": {
+          "id": 1,
+          "mcScore": 0,
+          "freeResponse": [
+            {
+              "userName": "Testttt",
+              "id": [
+                1,
+                1
+              ],
+              "question": "Translate to Japanese: That dress is ugly and expensive, so don't buy it!",
+              "answer": "あたしは人間じゃなくてバグテストから日本語がさっぱりわよ！！",
+              "noOfPeerGrades": 5,
+              "correctPeerGrades": 5
+            },
+            {
+              "userName": "Testttt",
+              "id": [
+                1,
+                2
+              ],
+              "question": "Translate to Japanese: The phone I'm buying tomorrow is easy to use.",
+              "answer": "あたしのホバークラフトの中にウナギがいる！あっ　怖い！",
+              "noOfPeerGrades": 3,
+              "correctPeerGrades": 0
+            }
+          ]
+        }
+      },
+      "id": 4
+    },
+    {
+      "userName": "Eddie",
+      "password": "Testttt",
+      "email": "Testttt",
+      "paidHowFar": 1,
+      "canBeGraded": true,
+      "quizzes": {
+        "quiz1": {
+          "id": 1,
+          "mcScore": 0,
+          "freeResponse": [
+            {
+              "userName": "Eddie",
+              "id": [
+                1,
+                1
+              ],
+              "question": "Translate to Japanese: That dress is ugly and expensive, so don't buy it!",
+              "answer": "ザコは出てくるなよ！！！",
+              "noOfPeerGrades": 2,
+              "correctPeerGrades": 2
+            },
+            {
+              "userName": "Eddie",
+              "id": [
+                1,
+                2
+              ],
+              "question": "Translate to Japanese: The phone I'm buying tomorrow is easy to use.",
+              "answer": "気をつけて！かなりの衝撃よ！",
+              "noOfPeerGrades": 5,
+              "correctPeerGrades": 5
+            }
+          ]
+        }
+      },
+      "id": 5
+    },
+    {
+      "userName": "DaphneMoon",
+      "password": "Testttt",
+      "email": "Testttt",
+      "paidHowFar": 1,
+      "canBeGraded": true,
+      "quizzes": {
+        "quiz1": {
+          "id": 1,
+          "mcScore": 0,
+          "freeResponse": [
+            {
+              "userName": "DaphneMoon",
+              "id": [
+                1,
+                1
+              ],
+              "question": "Translate to Japanese: That dress is ugly and expensive, so don't buy it!",
+              "answer": "今の戦い、自分ではイケてたと思うんだけど",
+              "noOfPeerGrades": 1,
+              "correctPeerGrades": 0
+            },
+            {
+              "userName": "DaphneMoon",
+              "id": [
+                1,
+                2
+              ],
+              "question": "Translate to Japanese: The phone I'm buying tomorrow is easy to use.",
+              "answer": "ラクショーラクショー！向かうところ敵なしだな！",
+              "noOfPeerGrades": 5,
+              "correctPeerGrades": 2
+            }
+          ]
+        }
+      },
+      "id": 6
+    },
+    {
+      "userName": "RozDoyle",
+      "password": "Testttt",
+      "email": "Testttt",
+      "paidHowFar": 1,
+      "canBeGraded": true,
+      "quizzes": {
+        "quiz1": {
+          "id": 1,
+          "mcScore": 0,
+          "freeResponse": [
+            {
+              "userName": "RozDoyle",
+              "id": [
+                1,
+                1
+              ],
+              "question": "Translate to Japanese: That dress is ugly and expensive, so don't buy it!",
+              "answer": "無愛想な上にイヤミまで！サイテーですわね！",
+              "noOfPeerGrades": 5,
+              "correctPeerGrades": 0
+            },
+            {
+              "userName": "RozDoyle",
+              "id": [
+                1,
+                2
+              ],
+              "question": "Translate to Japanese: The phone I'm buying tomorrow is easy to use.",
+              "answer": "んもぉ～！ちょろちょろジャマだよぉ！",
+              "noOfPeerGrades": 3,
+              "correctPeerGrades": 0
+            }
+          ]
+        }
+      },
+      "id": 7
+    },
+    {
+      "userName": "MartinCrane",
+      "password": "Testttt",
+      "email": "Testttt",
+      "paidHowFar": 1,
+      "canBeGraded": true,
+      "quizzes": {
+        "quiz1": {
+          "id": 1,
+          "mcScore": 0,
+          "freeResponse": [
+            {
+              "userName": "MartinCrane",
+              "id": [
+                1,
+                1
+              ],
+              "question": "Translate to Japanese: That dress is ugly and expensive, so don't buy it!",
+              "answer": "チョロ甘ですね",
+              "noOfPeerGrades": 0,
+              "correctPeerGrades": 0
+            },
+            {
+              "userName": "MartinCrane",
+              "id": [
+                1,
+                2
+              ],
+              "question": "Translate to Japanese: The phone I'm buying tomorrow is easy to use.",
+              "answer": "すぐに落としたガルドに気づくとは…",
+              "noOfPeerGrades": 4,
+              "correctPeerGrades": 0
+            }
+          ]
+        }
+      },
+      "id": 8
+    },
+    {
+      "userName": "NilesCrane",
+      "password": "Testttt",
+      "email": "Testttt",
+      "paidHowFar": 1,
+      "canBeGraded": true,
+      "quizzes": {
+        "quiz1": {
+          "id": 1,
+          "mcScore": 0,
+          "freeResponse": [
+            {
+              "userName": "NilesCrane",
+              "id": [
+                1,
+                1
+              ],
+              "question": "Translate to Japanese: That dress is ugly and expensive, so don't buy it!",
+              "answer": "ホントだよぉ～！",
+              "noOfPeerGrades": 5,
+              "correctPeerGrades": 5
+            },
+            {
+              "userName": "NilesCrane",
+              "id": [
+                1,
+                2
+              ],
+              "question": "Translate to Japanese: The phone I'm buying tomorrow is easy to use.",
+              "answer": "しょせん数だけよ、勝てるわ",
+              "noOfPeerGrades": 5,
+              "correctPeerGrades": 5
+            }
+          ]
+        }
+      },
+      "id": 9
+    },
+    {
+      "userName": "FrasierCrane",
+      "password": "Testttt",
+      "email": "Testttt",
+      "paidHowFar": 1,
+      "canBeGraded": true,
+      "quizzes": {
+        "quiz1": {
+          "id": 1,
+          "mcScore": 0,
+          "freeResponse": [
+            {
+              "userName": "FrasierCrane",
+              "id": [
+                1,
+                1
+              ],
+              "question": "Translate to Japanese: That dress is ugly and expensive, so don't buy it!",
+              "answer": "私はこの国が大好きですから?",
+              "noOfPeerGrades": 1,
+              "correctPeerGrades": 0
+            },
+            {
+              "userName": "FrasierCrane",
+              "id": [
+                1,
+                2
+              ],
+              "question": "Translate to Japanese: The phone I'm buying tomorrow is easy to use.",
+              "answer": "くるな！この期に及んでまだ私を師と呼ぶか…愚か者…?",
+              "noOfPeerGrades": 2,
+              "correctPeerGrades": 0
+            }
+          ]
+        }
+      },
+      "id": 10
+    },
+    {
+      "userName": "HankScorpio",
+      "password": "HankScorpio",
+      "email": "HankScorpio",
+      "paidHowFar": 1,
+      "canBeGraded": false,
+      "quizzes": {
+        "quiz1": {
+          "id": 1,
+          "mcScore": 0,
+          "freeResponse": [
+            {
+              "userName": "HankScorpio",
+              "id": [
+                1,
+                1
+              ],
+              "question": "Translate to Japanese: That dress is ugly and expensive, so don't buy it!",
+              "answer": "g",
+              "noOfPeerGrades": 0,
+              "correctPeerGrades": 0
+            },
+            {
+              "userName": "HankScorpio",
+              "id": [
+                1,
+                2
+              ],
+              "question": "Translate to Japanese: The phone I'm buying tomorrow is easy to use.",
+              "answer": "g",
+              "noOfPeerGrades": 0,
+              "correctPeerGrades": 0
+            }
+          ]
+        }
+      },
+      "id": 11
+    },
+    {
+      "userName": "FrankGrimes",
+      "password": "FrankGrimes",
+      "email": "FrankGrimes",
+      "paidHowFar": 1,
+      "canBeGraded": true,
+      "quizzes": [],
+      "id": 12
+    },
+    {
+      "userName": "OrangePen",
+      "password": "OrangePen",
+      "email": "OrangePen",
+      "paidHowFar": 1,
+      "canBeGraded": false,
+      "quizzes": {
+        "quiz1": {
+          "id": 1,
+          "mcScore": 0,
+          "freeResponse": [
+            {
+              "userName": "OrangePen",
+              "id": [
+                1,
+                1
+              ],
+              "question": "Translate to Japanese: That dress is ugly and expensive, so don't buy it!",
+              "answer": "g",
+              "noOfPeerGrades": 0,
+              "correctPeerGrades": 0
+            },
+            {
+              "userName": "OrangePen",
+              "id": [
+                1,
+                2
+              ],
+              "question": "Translate to Japanese: The phone I'm buying tomorrow is easy to use.",
+              "answer": "g",
+              "noOfPeerGrades": 0,
+              "correctPeerGrades": 0
+            }
+          ]
+        }
+      },
+      "id": 13
+    },
+    {
+      "userName": "NewUser",
+      "password": "NewUser",
+      "email": "NewUser",
+      "paidHowFar": 1,
+      "canBeGraded": false,
+      "quizzes": {
+        "quiz1": {
+          "id": 1,
+          "mcScore": 0,
+          "freeResponse": [
+            {
+              "userName": "NewUser",
+              "id": [
+                1,
+                1
+              ],
+              "question": "Translate to Japanese: That dress is ugly and expensive, so don't buy it!",
+              "answer": null,
+              "noOfPeerGrades": 0,
+              "correctPeerGrades": 0
+            },
+            {
+              "userName": "NewUser",
+              "id": [
+                1,
+                2
+              ],
+              "question": "Translate to Japanese: The phone I'm buying tomorrow is easy to use.",
+              "answer": null,
+              "noOfPeerGrades": 0,
+              "correctPeerGrades": 0
+            }
+          ]
+        }
+      },
+      "id": 14
+    },
+    {
+      "userName": "a",
+      "password": "a",
+      "email": "a",
+      "paidHowFar": 1,
+      "canBeGraded": true,
+      "quizzes": [],
+      "id": 15
+    }
+  ]
+}

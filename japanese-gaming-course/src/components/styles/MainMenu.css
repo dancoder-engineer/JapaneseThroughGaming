@@ -1,0 +1,46 @@
+
+.cards {
+    display:flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: lightcoral;
+}
+
+.card {
+    background-color: paleturquoise;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 220px;
+    height: 290px;
+    display:inline-block;
+}
+
+.picDiv {
+    width: 219px;
+    height: 195px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coverPic {
+    width: 150px;
+    margin: auto;
+    display: block;
+}
+
+.centeredText {
+    text-align:center;
+}
+
+.error {
+    text-align:center;
+    color:firebrick
+}
+
+.quizData{
+    font-size: 0.9em;
+    text-align: center;
+}

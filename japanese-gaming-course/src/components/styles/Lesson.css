@@ -1,0 +1,232 @@
+.hub {
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-rows: 1fr 9fr;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+.mainInfo{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    border-style: solid;
+    border-width: 3px;
+    background-color:moccasin;
+}
+
+.linkToGame{
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    border-style: solid;
+    border-width: 3px;
+    background-color:deepskyblue;
+}
+
+.linktoJapanese{
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-column-end: span 1;
+    border-style: solid;
+    border-width: 3px;
+    background-color:lightcoral;
+}
+
+.linkBack{
+    grid-row-start: 1;
+    grid-column-start: 4;
+    grid-column-end: span 1;
+    border-style: solid;
+    border-width: 3px;
+    background-color:lightgrey;
+}
+
+.theLesson{
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: span 4;
+        border-style: solid;
+        border-width: 3px;
+        background-color:lime;
+}
+
+.centeredText {
+    text-align:center;
+}
+
+
+.smallCenteredText {
+    text-align:center;
+    font-size: 0.9em;
+}
+
+.smallLeftText {
+    font-size: 0.9em;
+}
+
+
+.gameCommentary {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    
+}
+
+.gameReview{
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    padding: 7px;
+    border-right: solid;
+}
+
+.gameScreenshots{
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    padding: 7px;
+    border-left: solid;
+}
+
+.screen{
+    font-size: 0.9em;
+}
+
+.sideImg{
+    max-width:100%;
+    max-height:100%;
+}
+
+.extraExample {
+        padding: 5px;
+        display: grid;
+        grid-template-columns: 175px 5fr;
+        grid-template-rows: 30px 1fr;
+        border-radius: 3px;
+}
+
+.extraTitle{
+    border: solid;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+
+.extraBox {
+    border: solid;
+    padding: 5px;
+    grid-row-start: 2;
+    grid-row-end: span 1;
+    grid-column-start: 1;
+    grid-column-end: span 1;
+}
+
+.extraText {
+    border: solid;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: span 1;
+}
+
+.extraImage{
+    max-width:100%;
+    max-height:100%;
+    margin:auto;
+    display:block;
+}
+
+
+.lessonScreenshot {
+    width: 450px;
+    margin:auto;
+    display:block;
+}
+
+.vocTable {
+    margin:auto;
+}
+
+
+.mainPagePic {
+    max-width:100%;
+    margin:auto;
+    display:block;
+}
+
+
+.picCard {
+    padding: 5px;
+    display:inline-block;
+    
+}
+
+
+
+.mainPageImgInDiv{
+    max-width:100%;
+    margin:auto;
+    display:block;
+}
+
+.gameDataPage {
+    padding: 5px;
+    display: grid;
+    grid-auto-columns: minmax(30px, auto);
+    grid-auto-rows: minmax(30px, auto);
+    border-radius: 3px;
+}
+
+.frontCover {
+    padding: 5px;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    display: flex;
+    justify-content: center;
+}
+
+.titleScreen {
+    padding: 5px;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    display: flex;
+    justify-content: center;
+}
+
+.backCover {
+    padding: 5px;
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-column-end: span 1;
+    display: flex;
+    justify-content: center;
+}
+
+.releaseInfo {
+    padding: 10px;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    justify-content: center;
+}
+
+.otherPic1 {
+    padding:5px;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+.otherPic2 {
+    padding:5px;
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-column-end: span 1;
+    display: flex;
+    justify-content: center;
+}

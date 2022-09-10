@@ -1,0 +1,134 @@
+.quizPage {
+    background-color: lightblue;
+    padding: 5px;
+    display: grid;
+    grid-auto-columns: 250px 1fr 250px;
+    grid-auto-rows: 100px 1fr 100px;
+    border-radius: 3px;
+}
+
+.questionNumber {
+    padding: 5px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: span 3;
+    grid-row-end: span 3;
+}
+
+.kanjiKanaButton {
+    padding: 5px;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+}
+
+.quizQuestion {
+    padding: 5px;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+}
+
+.questionDiv{
+    background-color: greenyellow;
+}
+
+.backButton {
+    padding: 5px;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+}
+
+.nextButton {
+    padding: 5px;
+    grid-column-start: 3;
+    grid-row-start: 3;
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+}
+
+.submitButton {
+    padding: 5px;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+}
+
+.quizAnswers {
+    padding: 5px;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-column-end: span 3;
+    grid-row-end: span 1;
+}
+
+
+
+.middleForDev {
+    padding: 5px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+}
+
+
+.centeredText {
+    text-align:center;
+}
+
+.inputBox {
+    max-width:100%;
+    margin:auto;
+    display:block;
+}
+
+
+.unchosen{
+    background-color: deepskyblue;
+    text-align:center;
+}
+
+.chosen{
+    background-color: lightcoral;
+    text-align:center;
+}
+
+.peerGrading {
+    border-style: solid;
+    padding: 5px;
+    display: grid;
+    grid-auto-columns: 2.5fr 1fr;
+    grid-auto-rows: 1fr;
+    border-radius: 3px;
+}
+
+.peerQuestion {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.peerQuestionChoice {
+    padding: 12px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.submitButton{
+    margin:auto;
+    display:block;
+}
+
+.error {
+    text-align:center;
+    color:firebrick
+}

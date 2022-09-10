@@ -1,0 +1,2 @@
+module OtherpicsHelper
+end

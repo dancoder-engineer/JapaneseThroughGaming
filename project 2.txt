@@ -1,0 +1,5 @@
+project	cd ~/code/projects/project2/japanese-gaming-course
+	npm start
+
+json	cd ~/code/projects/project2/json-server-template
+	json-server --watch db.json -p 2500

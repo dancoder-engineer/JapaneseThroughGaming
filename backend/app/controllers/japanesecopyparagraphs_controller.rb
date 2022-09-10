@@ -1,0 +1,2 @@
+class JapanesecopyparagraphsController < ApplicationController
+end
