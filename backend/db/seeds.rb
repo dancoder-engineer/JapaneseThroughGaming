@@ -166,3 +166,328 @@ Vocabword.create({
     
 })
 
+
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+
+
+Lesson.create({
+    title: "Tales of Destiny",
+    isgame: true
+})
+
+Gamesection.create({
+    lesson_id: 2
+})
+
+Release.create({
+    gamesection_id: 2,
+    system: "PlayStation 1",
+    date: "December 23, 1997"
+})
+
+Release.create({
+    gamesection_id: 2,
+    system: "PlayStation 2",
+    date: "November 30, 2006"
+})
+
+Release.create({
+    gamesection_id: 2,
+    system: "PlayStation 2 (Director's Cut)",
+    date: "January 31, 2008"
+})
+
+
+
+
+
+Cover.create({
+    front: "https://i.imgur.com/gHcg7pM.jpg", 
+    back: "https://i.imgur.com/Ant6vjY.jpg",
+    titlescreen: "https://imgur.com/r3MjlBV.png",
+    gamesection_id: 2
+})
+
+Otherpic.create({
+    pic: "https://imgur.com/cshAb8Z.jpg",
+    caption: "The limited edition of the Director's Cut comes with an artbook, as well as a CD of arranged music from all over the Tales series. It's a really nice set.",
+    cover_id: 2
+})
+
+Otherpic.create({
+    pic: "https://i.imgur.com/37iDJJX.jpg",
+    caption: "You may mock me for keeping this 1998 calendar around, but when the days line up again in 2026, it'll be usable again. Also the art is really lovely.",
+    cover_id: 2
+})
+
+
+
+
+Paragraph.create({
+    gamesection_id: 2,
+    text: "Tales of Destiny is the second title in the Tales series. Coming two years after the first one, and possibly being moved from Nintendo 64 (there were rumors of ‘Tales of Phantasia 2’ for N64 at one point, but it never materialized, and there doesn't seem to be any concrete information about this. The game has some high points, and some really low points."
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "The highest point is that it has one of the greatest game soundtracks ever made. Almost every song is worth listening to, which is a major feat as for as video game soundtracks go, especially among the Tales series, where soundtracks consist about 20% good songs and 80% filler."
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "Some of the low points are the battle system, which is pretty much just lifted straight out of Tales of Phantasia and has not aged well to the point where if you play the original Tales of Destiny (we'll get to the remake in a bit) after playing most Tales games that came after it, the game is pretty much unplayable. Couple that with an absolutely insane random encounter rate, and you have a game that's a flat out chore to play."
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "Even with this mixed bag of elements throughout, the game also varies in quality depending on how far into it you get."
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "The first half of the game is incredible, giving you one of the Tales series's best casts on an adventure to recover a powerful artifact known as the Eye of God (or Atamoni depending on which version of the game you're playing) before it can be used to take over the world."
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "The pacing takes a major hit in the second half. While the story itself remains good, bringing the villains into focus and giving them good motivations, the game becomes a major chore to play. After a certain emotional scene about halfway through, you go to a second world map and the game becomes more of a dungeon crawler where the dungeons aren't very fun to play."
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "Most of them take the form of transporter mazes where you have to go up and down just to find the way to the end, occasionally broken up by puzzles, and there are far too many dungeons, the sheer number of which makes the plot feel like it stops short. For example, let's look at the first mission in this area, go to a dungeon and do a thing (no spoilers.) Instead of going onto a world map, into the dungeon, finishing it and going back to where you started, you have to:"
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "1. Go through a section of a world map, which is so much of a maze, it may as well be a mini dungeon in itself."
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "2. Go through one dungeon to teleport to another"
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "3. Go through that dungeon to get back to the world map"
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "4. Go through another mini dungeon on the world map"
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "5. Finally get to the dungeon you were aiming for."
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "That's essentially five dungeons where one would've done the trick nicely, and the game continues like this for at least a quarter of its total time!"
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "The remake, which came out as the last Tales game on the PlayStation 2, released right in the middle of the series’ golden age, gives us some new plot elements, as well as skits and a totally new battle system. The battle system completely does away with TP, rather focusing on what you can do in individual combos by having moves use CC, a new type of TP which recovers after each combo. The battle system is really fun, so that fixes that problem from the original. If only the rest of the original's problems were fixed as well."
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "The pacing issues? Still there in their entirety. The new battle system makes the second half less of a slog, but it's still a slog due to the fact that the dungeons are still the same mazes of transporters. There are new puzzles here and there, but the dungeons really haven't changed much, which is a huge negative in this game."
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "There is a Director's Cut of the remake, which adds ‘Leon Side,’ a mode where you play the first half of the story with Leon as the main character, and stops right before the second half of the game starts. It won't give you the full story of the game, but it will give you a full story with a beginning, middle, and end which stops before the game gets annoying, and is therefore probably the best way to play the game."
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "Tales of Destiny can be a joy to play, but at times is also a massive pain. If the story grabs you enough, it can be worth forcing yourself through the second half of the game to see how things turn out, but otherwise the second half is just gonna sap your patience."
+})
+Paragraph.create({
+    gamesection_id: 2,
+    text: "Fun Fact: Hikaru Midorikawa, the voice actor for the anti-social Leon also did the voice of Hiro in the 32-bit remake of Lunar 2. Guy's got range."
+})
+
+
+
+
+Screenshot.create({
+    url: "https://i.imgur.com/87xpWxF.png",
+    caption: "You know it's time for some serious therapy when you have to call your father -sama.",
+    gamesection_id: 2
+})
+
+Screenshot.create({
+    url: "https://i.imgur.com/t2vNONX.png",
+    caption: "The battle system in this game is seriously great. So great, in fact, that they used a slightly modified version for Tales of Hearts. Unfortunately, it wasn't good enough to keep in the Vita remake of Tales of Hearts.",
+    gamesection_id: 2
+})
+
+Screenshot.create({
+    url: "https://i.imgur.com/QfMUVSc.png",
+    caption: "Tales of Destiny's cast has always been it's greatest asset, and the remake adds tons of new interactions to make this aspect of the game even better. From tons of new skits to new story scenes that really flesh out these characters, they did a great job here.",
+    gamesection_id: 2
+})
+
+
+
+Japanesesection.create({
+    lesson_id: 2,
+    lessontitle: "Using multiple adjectives to describe something",
+    shortdescription: "Adj + くて/で",
+    screenshot: "https://i.imgur.com/DXfCEAH.jpg",
+})
+
+Howtomake.create({
+    text:"い adj: Remove い and add くて",
+    japanesesection_id: 2
+})
+
+Howtomake.create({
+    text:"な adj: Add で",
+    japanesesection_id: 2
+})
+
+Japanesecopyparagraph.create({
+    text: "Squeeeee! Isn't Leon just sooooooo dreamy?",
+    japanesesection_id: 2
+})
+
+Japanesecopyparagraph.create({
+    text: "We're gonna use this to learn how to use two or more adjectives at once to describe something. There are two types of adjectives, and luckily this sentence uses the grammar of both.",
+    japanesesection_id: 2
+})
+
+Japanesecopyparagraph.create({
+    text: "The two that get connected are ずうずうしい and のつえんき（な）.",
+    japanesesection_id: 2
+})
+
+Japanesecopyparagraph.create({
+    text: "For -い adjectives, we just change that last い to くて,",
+    japanesesection_id: 2
+})
+
+Japanesecopyparagraph.create({
+    text: "          ずうずうしい -> ずうずうし ->  ずうずうしくて",
+    japanesesection_id: 2
+})
+
+Japanesecopyparagraph.create({
+    text: "And for な adjectives, we use で instead of な",
+    japanesesection_id: 2
+})
+
+Japanesecopyparagraph.create({
+    text: "          のうてんき -> のうてんきで",
+    japanesesection_id: 2
+})
+
+Example.create({
+    title: "",
+    box: "",
+    kanji:"僕はおまえのように、図々しくて、能天気で、馴れ馴れしい奴が大嫌いだ。",
+    nokanji: "ぼくはおまえのように、ずうずうしくて、のうてんきで、なれなれしいやつがだいきらいいだ。",
+    english: "I really hate brazen, laid back, and over-familiar guys like you!",
+    japanesesection_id: 2
+})
+
+Example.create({
+    title: "Chrono Cross",
+    box: "https://www.chronocompendium.com/images/wiki/5/59/Chrono_Cross_Japanese_box_art.jpg",
+    kanji: "心細くて、か弱くて、かわいい 旅の娘が、同行してくれって言ってんだぜ？",
+    nokanji: "こころぼそくて、かよわくて、かわいい たびのむすめが、どうこうしてくれっていってんだぜ？",
+    english: "Are you saying you'll take along this helpless, weak, and cute traveling girl?",
+    japanesesection_id: 2
+})
+
+Example.create({
+    title: "Aqutallion",
+    box: "http://www.videogameden.com/sfc/cover/aqt.jpg",
+    kanji: "",
+    nokanji: "このまちを　ぜったい おそわれる　まえいじょうの きれいで　かっこいいまちに　するからね！",
+    english: "Let's make this town even more beautiful and cooler than ever before!",
+    japanesesection_id: 2
+})
+
+
+
+Vocabword.create({
+    kanji: "図々しい",
+    nokanji: "ずうずうしい",
+    english: "Brazen",
+    japanesesection_id: 2
+})
+
+Vocabword.create({
+    kanji: "能天気",
+    nokanji: "のうてんき",
+    english: "Laid back",
+    japanesesection_id: 2
+})
+
+Vocabword.create({
+    kanji: "馴れ馴れしい",
+    nokanji: "なれなれしい",
+    english: "Overly familiar",
+    japanesesection_id: 2
+})
+
+Vocabword.create({
+    kanji: "心細い",
+    nokanji: "こころぼそい",
+    english: "Helpless",
+    japanesesection_id: 2
+})
+
+Vocabword.create({
+    kanji: "か弱い",
+    nokanji: "かよわい",
+    english: "Weak",
+    japanesesection_id: 2
+})
+
+Vocabword.create({
+    kanji: "襲う",
+    nokanji: "おそう",
+    english: "Attack",
+    japanesesection_id: 2
+})
+
+Vocabword.create({
+    kanji: "以上",
+    nokanji: "いじょう",
+    english: "More than",
+    japanesesection_id: 2
+})
+
+Vocabword.create({
+    kanji: "",
+    nokanji: "かっこいい",
+    english: "Cool",
+    japanesesection_id: 2
+})
+
+
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+
+
+
+
+
+=begin
+
+Vocabword.create({
+    kanji: "",
+    nokanji: "",
+    english: "",
+    japanesesection_id: 2
+})
+
+=end
