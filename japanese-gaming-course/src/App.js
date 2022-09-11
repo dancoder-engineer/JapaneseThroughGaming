@@ -62,20 +62,28 @@ useEffect(() => {
 
 function makeLessons(lessons) {
   setLessons(lessons)
-  //console.log(lessons)
+//  console.log(lessons)
 
+ 
   setTitles( 
-        lessons.map(i => { return {
-        id: i.id,
-        title: i.title,
-        isGame: i.isgame,
-        cover: i.cover.front,
-        shortDescription: i.japanesesection.shortdescription
+        lessons.map(i => { 
+          
+
+          return {
+          id: i.id,
+          title: i.title,
+          isGame: i.isgame,
+          cover: i.cover.front,
+          shortDescription: i.japanesesection.shortdescription
       }
 
-  }))
+   }))
+
 
 }
+
+
+  
 
   return (
     <div className="top">
