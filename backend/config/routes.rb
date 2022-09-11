@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :questions
   resources :lessons
   resources :examples
   resources :vocabwords
@@ -19,4 +20,5 @@ Rails.application.routes.draw do
   resources :releases, only: [:index]
   resources :japanesesections, only: [:index]
   resources :lessons, only: [:index, :show]
+  resources :quizzes, only: [:index, :show]
 end

@@ -10,25 +10,68 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
     //console.log(userUrl)
     
     const params = useParams()
-    let quizData = lessons.find(i => { return i.id === parseInt(params.id) * 5 }).quizData
-    let noOfQuestions = quizData.multipleChoiceQuestions.length + quizData.openEndedQuestions.length
 
+
+    //let quizData = lessons.find(i => { return i.id === parseInt(params.id) * 5 }).quizData
+   // let noOfQuestions = 0
+ //  let mcAnswers = 0
+    let [questionData, setQuestionData] = useState(null)
+    
+    let [quizData, setQuizData] = useState(null)
     let [questionNumber, setQuestionNumber] = useState(1)
     let [useKanji, setUseKanji] = useState(true)
     let [questionType, setQuestionType] = useState("multipleChoiceQuestions")
-    let [questionData, setQuestionData] = useState(quizData.multipleChoiceQuestions[0])
+    let [noOfQuestions, setNoOfQuestions] = useState(0)
     let [answers, setAnswers] = useState([])
     let [quizGoingOn, setQuizGoingOn] = useState(true)
+    let [mcAnswers, setMcAnswers] = useState(null)
+    
 
-    let mcAnswers = quizData.multipleChoiceQuestions.map(i => i.correctChoice)
+
 
     useEffect( () => {
-        let tempAns=[]
+        let url="http://127.0.0.1:3000/quizzes/"+params.id
+        fetch(url)
+        .then(res => res.json())
+        .then(data => { 
+            createQuiz(data)
+            let tempAns=[]
         for(let i=0; i < noOfQuestions; i++) { tempAns.push(null) }
         setAnswers([...tempAns])
+        })
+
+        
     }, [])
 
    
+    function createQuiz(data){
+        
+        let mcq = []
+        for (let i of data.questions) { 
+            mcq.push({
+                question: i.ques,
+                choices: [
+                    i.choice1.split("||"),
+                    i.choice2.split("||"),
+                    i.choice3.split("||"),
+                    i.choice4.split("||")
+                ],
+                correctChoice: i.correctChoice
+
+            }) }
+        let qData = {
+            quizNo: params.id,
+            multipleChoiceQuestions: mcq
+        }
+        console.log("qdata", qData)
+        setNoOfQuestions(qData.multipleChoiceQuestions.length)
+        setMcAnswers(qData.multipleChoiceQuestions.map(i => i.correctChoice))
+        setQuestionData(qData.multipleChoiceQuestions[0])
+    
+        setQuizData(qData)
+
+    }
+
     function handleChange(answer) {
 
         let tempAnswer=[...answers]
@@ -92,13 +135,10 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
 
     useEffect(() => {
         
-        if (questionNumber > (quizData.multipleChoiceQuestions.length)) { 
-            setQuestionType("openEndedQuestions") 
-            let quesNo = questionNumber - quizData.multipleChoiceQuestions.length
-            setQuestionData(quizData.openEndedQuestions[quesNo-1])
-        }
-        else { 
+
+//        else { 
             setQuestionType("multipleChoiceQuestions")
+            if (quizData) {
             setQuestionData(quizData.multipleChoiceQuestions[questionNumber-1])
          }
     }, [questionNumber])
@@ -118,17 +158,6 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
         let gradeSpiel = `You got ${right} ${ques} right out of ${quizData.multipleChoiceQuestions.length}. That's ${right/quizData.multipleChoiceQuestions.length*100}%`
         document.querySelector("#grade").innerHTML=gradeSpiel
 
-        let freeResp = quizData.openEndedQuestions.map( (i, qno) => { return (
-           {
-                userName: userName,
-                id: [quizData.quizNo, qno+1],
-                question: i,
-                answer: answers[quizData.multipleChoiceQuestions.length+qno],
-                noOfPeerGrades: 0,
-                correctPeerGrades: 0
-           }
-        )
-        })
 
 
 
@@ -142,7 +171,7 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
                 
                 id: quizData.quizNo,
                 mcScore: Math.floor(right/quizData.multipleChoiceQuestions.length*100),
-                freeResponse: freeResp
+           
                 }
             
           
@@ -165,7 +194,7 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
     }
     // <p className="centeredText">Question {questionNumber} of {noOfQuestions}</p>
 
-    let questionComponent = <QuizQuestion questionData={questionData} useKanji={useKanji} questionType={questionType} questionNumber={questionNumber} handleChange={handleChange} answers={answers} />
+
     let backButton = <div><br /><button onClick={goBack}>Previous Question</button></div>
     let submitButton = <div><br /><button className="inputBox"  onClick={gradeQuiz}>Let's Get this Baby Graded!</button></div>
     let nextButton = <div><br /><button onClick={goForward}>Next Question</button></div>
@@ -190,6 +219,9 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
         </div>
     )
 
+     let questionComponent = <QuizQuestion questionData={questionData} useKanji={useKanji} questionType={questionType} questionNumber={questionNumber} handleChange={handleChange} answers={answers} />
+
+
 
 
     function setgoingOn(){
@@ -197,7 +229,7 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
     }
 
 
-
+//246:  {quizGoingOn ? questionComponent : null}
     return (
         <div className="quizPage">
             <div className="questionNumber">{quizGoingOn ? kanjiButton : quizAnswers}</div>
@@ -208,7 +240,7 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
 
 
             <div className="quizQuestion">
-                {quizGoingOn ? questionComponent : null}
+            {quizGoingOn ? questionComponent : null}
             </div>
 
             <div className="backButton">{quizGoingOn ? backButton : null}</div>

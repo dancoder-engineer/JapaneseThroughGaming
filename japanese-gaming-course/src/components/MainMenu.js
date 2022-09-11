@@ -7,7 +7,7 @@ function MainMenu({ titles, paidHowFar, user }) {
 let canSeeTitles = titles.filter( i => i.id <= paidHowFar)
 let temp = canSeeTitles.map(i => <MainMenuCard key={i.id} titles={i} user={user} /> )
 
-//console.log(canSeeTitles)
+
 
 return (
    <div className="cards">

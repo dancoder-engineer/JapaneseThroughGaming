@@ -10,12 +10,8 @@ function StudentInfo({loggedIn, user}) {
 
     console.log(user.canBeGraded)
 
-    function directToPeer() {
-        history.push('/peer')
-       }
     
         for (let quiz in user.quizzes){
-            //console.log(user.quizzes[quiz])
             quizList.push(<StudentInfoQuizHistory quiz={user.quizzes[quiz]} />)
         }
     
@@ -26,12 +22,6 @@ function StudentInfo({loggedIn, user}) {
         )
     }
 
-    let peerGradingButton = (
-        <div>
-            <button className="centeredButton" onClick={directToPeer}>Peer Grade</button>
-            <p className="centeredText">Note: In order for your open ended quiz questions to be graded, you must first do a round of peer grading every time you take a quiz.</p>
-        </div>
-    )
 
     if(loggedIn) {
         return(
@@ -42,7 +32,7 @@ function StudentInfo({loggedIn, user}) {
                 <br />
                 <br />
                 <br />
-                {user.canBeGraded ? null : peerGradingButton}
+                {user.canBeGraded ? null : null}
             </div>
         )
     }

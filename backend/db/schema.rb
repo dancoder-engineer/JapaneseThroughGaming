@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_10_164309) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_11_205414) do
   create_table "covers", force: :cascade do |t|
     t.string "front"
     t.string "back"
@@ -74,6 +74,23 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_10_164309) do
   create_table "paragraphs", force: :cascade do |t|
     t.text "text"
     t.integer "gamesection_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.text "ques"
+    t.text "choice1"
+    t.text "choice2"
+    t.text "choice3"
+    t.text "choice4"
+    t.text "correctChoice"
+    t.integer "quiz_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "quizzes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "releases", force: :cascade do |t|

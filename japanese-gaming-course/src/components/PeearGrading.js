@@ -67,7 +67,7 @@ function PeerGrading({url, currentUser}) {
                             </div>
                              <div className="peerQuestionChoice" id={j}>
                              <form className="selectionForm" >
-                                <input type="radio" value="Correct" name="a" name="a" id="correct" /> Correct<br />
+                                <input type="radio" value="Correct" name="a" id="correct" /> Correct<br />
                                 <input type="radio" value="Incorrect" name="a" id="incorrect" /> Incorrect<br />
                                 <input type="radio" value="Skip" name="a" id="skip" /> Skip
                              </form>
@@ -143,21 +143,24 @@ function PeerGrading({url, currentUser}) {
             })
         }
 
-
+let oldDiv = (    <div>
+    {data && processData()}
+     <br />
+     <button onClick={sumbitForms} className="submitButton">Submit</button>
+     <button onClick={update} className="submitButton">Update</button>
+     <p className="error"></p>
+<br />
+<br />
+<br />
+</div>)
 
 
 
         return(
             <div>
-                    {data && processData()}
-                     <br />
-                     <button onClick={sumbitForms} className="submitButton">Submit</button>
-                     <button onClick={update} className="submitButton">Update</button>
-                     <p className="error"></p>
-                <br />
-                <br />
-                <br />
+                <h1>No Open Questions Anymore</h1>
             </div>
+        
 )
 
 }

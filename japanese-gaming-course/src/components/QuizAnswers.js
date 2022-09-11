@@ -41,16 +41,7 @@ function QuizAnswers({answers, mcAnswers, quizData, allQuestions, useKanji}) {
         </div>
     )})
 
-    let openQuestions = quizData.openEndedQuestions.map((i, place) => {
-        return(
-            <div>
-                <p key={howManyMC + place + 1}>Question {howManyMC + place + 1}: {i}<br />
 
-            Your Answer: {answers[howManyMC+place]}
-            </p>
-            </div>
-        )
-    })
 
     function toMenu() {
         history.push("../../")
@@ -62,7 +53,6 @@ function QuizAnswers({answers, mcAnswers, quizData, allQuestions, useKanji}) {
             <br />
             <br />
             {multiplechoiceAnswers}
-            {openQuestions}
             
             The open ended questions are peer graded. Once you've graded enough questions for others, fellow Japanese learners will grade your questions. Keep an eye on your quiz info below for more info.
             

@@ -957,6 +957,87 @@ Cover.create({
     gamesection_id: 5
 })
 
+Quiz.create({})
+
+Question.create({
+    quiz_id: 1,
+    ques: "Don't eat the rotten sushi!",
+    choice1: "腐った寿司を食べて死ね！||くさった　すしを　たべて　しね！",
+    choice2: "腐った寿司を食べるな||くさった　すしを　たべるな！",
+    choice3: "おいしい寿司を食べるな！||おいしい　すしを　たべるな！",
+    choice4: "へたくそで作った寿司をどうぞ。||へたくそで　つくった　すしを　どうぞ。",
+    correctChoice: "B"
+})
+
+Question.create({
+    quiz_id: 1,
+    ques: "Don't choose Charmander (hitokage,) because Brock (Takeshi) will be too difficult.",
+    choice1: "優しいゲームが好きじゃないから、ヒトカゲを選ぶよ！||やさしい　ゲームが　すきじゃない　から、ヒトカゲを　えらぶよ！",
+    choice2: "ジュンサーさん、タケシはいくら面倒くさくても、逮捕するな！||ジュンサーさん、タケシは　いくら　めんどうくさくても、たいほするな！",
+    choice3: "タケシは難しいから　ヒトカゲを選ぶなよ！||タケシは　むずかしい　から　ヒトカゲを　えらぶなよ！",
+    choice4: "タケシ、急いでいるからナンパをするなよ！||タケシ、いそいでいる　から　ナンパを　するなよ！",
+    correctChoice: "C"
+})
+
+Question.create({
+    quiz_id: 1,
+    ques: "My wife is a beautiful and kind person.",
+    choice1: "女房はきれいで優しい人です。||にょうぼうは　きれいで　やさしい　ひとです。",
+    choice2: "女房はきらいで優しくない人です。||にょうぼうは　きらいで　やさしくない　ひとです。",
+    choice3: "女房の友達の方がきれいで優しい人です。||にょうぼうの　ともだちの　ほうが　きらいで　やさしい　ひとです。",
+    choice4: "今の女房が一番醜いぜ！||いまの　にょうぼうが　いちばん　みにくいぜ！",
+    correctChoice: "A"
+})
+
+Question.create({
+    quiz_id: 1,
+    ques: "These shorts are cute and cheap!",
+    choice1: "このたんパンはダサいから安いです。||この　たんパンは　ダサい　から　やすいです。",
+    choice2: "あなたが履いているたんパンはかわいい！買っていい？||あなたが　はいている　たんパンは　かわいい！かっていい？",
+    choice3: "この私はどのたんパンを履いてもかわいい！||この　わたしは　どの　たんパンを　はいても　かわいい！",
+    choice4: "このたんパンはかわいくて安いですね！||この　たんパンは　かわいくて　やすいですね！",
+    correctChoice: "D"
+})
+
+Question.create({
+    quiz_id: 1,
+    ques: "The alcohol I drank last night was delicious.",
+    choice1: "千九百九十八年飲んだお酒はおいしかったです。||せんきゅうひゃくきゅうじゅうはちねん　のんだ　おさけは　おいしかったです。",
+    choice2: "昨日飲まなかったお酒はおいしかったです。||きのう　のまなかった　おさけは　おいしかったです。",
+    choice3: "昨日飲んだお酒はおいしかったです。||きのう　のんだ　おさけは　おいしかったです。",
+    choice4: "昨日飲んだお酒は毒でした。||きのう　のんだ　おさけは　どくでした。",
+    correctChoice: "C"
+})
+
+Question.create({
+    quiz_id: 1,
+    ques: "The movie I saw last week was good!",
+    choice1: "先週見た映画は楽しかったです！||せんしゅう　みた　えいがは　たのしかったです！",
+    choice2: "先週見た映画の女優はべっぴんです！||せんしゅう　みた　えいがの　じょゆうは　べっぴんです！",
+    choice3: "先週見た映画は変でした！||せんしゅう　みた　えいがは　へんでした！",
+    choice4: "先週見たアニメは楽しかったです！||せんしゅう　みた　アニメは　たのしかったです！",
+    correctChoice: "A"
+})
+
+Question.create({
+    quiz_id: 1,
+    ques: "This question is easy to understand.",
+    choice1: "この質問の答えはＣです。||この　しつもんの　こたえは　Ｃです。",
+    choice2: "この試験の答えは変ですね。||この　しけんの　こたえは　へんですね。",
+    choice3: "この質問はわかりやすいです。||この　しつもんは　わかりやすいです。",
+    choice4: "この質問はダメですから諦めるしかない。||この　しつもんは　ダメです　から　あきらめるしかない。",
+    correctChoice: "C"
+})
+
+Question.create({
+    quiz_id: 1,
+    ques: "That computer is easy to use.",
+    choice1: "あのパソコンは使いやすいです。||あの　パソコンは　つかいやすいです。",
+    choice2: "あのパソコンは壊れやすいです。||あの　パソコンは　こわれやすいです。",
+    choice3: "あのパソコンはアップルだから買うなよ！||あの　パソコンは　アップルだから　かうなよ！",
+    choice4: "私のパソコンは高かったから、スイッチを買ったらよかった！||わたしの　パソコンは　たかかったから、スイッチを　かったらよかった！",
+    correctChoice: "A"
+})
 
 
 =begin
@@ -1037,6 +1118,18 @@ Vocabword.create({
     nokanji: "",
     english: "",
     japanesesection_id: 2
+})
+
+Quiz.create({})
+
+Question.create({
+    quiz_id: 1,
+    ques: "",
+    choice1: "",
+    choice2: "",
+    choice3: "",
+    choice4: "",
+    correctChoice: ""
 })
 
 =end

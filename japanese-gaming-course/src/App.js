@@ -8,7 +8,6 @@ import Quiz from "./components/Quiz.js"
 import Login from "./components/Login.js"
 import Register from "./components/Register.js"
 import StudentInfo from "./components/StudentInfo.js"
-import PeerGrading from "./components/PeerGrading.js"
 
 function App() {
 
@@ -106,7 +105,7 @@ function makeLessons(lessons) {
       </Route>
 
       <Route path="/peer">
-        <PeerGrading url={url} currentUser={user}/>
+        
       </Route>
     </Switch>
     

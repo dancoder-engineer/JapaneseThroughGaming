@@ -536,8 +536,13 @@
       "password": "a",
       "email": "a",
       "paidHowFar": 1,
-      "canBeGraded": true,
-      "quizzes": [],
+      "canBeGraded": false,
+      "quizzes": {
+        "quiz1": {
+          "id": "1",
+          "mcScore": 12
+        }
+      },
       "id": 15
     }
   ]

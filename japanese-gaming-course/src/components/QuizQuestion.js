@@ -3,9 +3,11 @@ import './styles/Quiz.css'
 
 function QuizQuestion({questionData, useKanji, questionType, questionNumber, handleChange, answers}) {
 
+  //  console.log(questionData)
     let choices
 
-    if ( questionType === "multipleChoiceQuestions") {
+    if ( questionData) {
+
         if (useKanji) { choices = questionData.choices.map(i => i[0]) }
         if (!useKanji) { choices = questionData.choices.map(i => i[1]) }
 
@@ -44,45 +46,39 @@ function QuizQuestion({questionData, useKanji, questionType, questionNumber, han
 
     }, [questionNumber])
 
-
-
-    if (questionType === "multipleChoiceQuestions") {
+    if (questionData) {
     return(
         <div className="questionDiv">
-            <h3 className="centeredText">{questionNumber}. {questionData.Question}</h3>
-            <div id="A" className="unchosen" onClick={e => handleChange(e)} >
-                <p id="A">Ａ。{choices[0]}</p>
-            </div>
-
-            <div id="B" className="unchosen" onClick={e => handleChange(e)} >
-                <p id="B">Ｂ。{choices[1]}</p>
-            </div>
-
-            <div id="C" className="unchosen" onClick={e => handleChange(e)} >
-                <p id="C">Ｃ。{choices[2]}</p>
-            </div>
-
-            <div id="D" className="unchosen" onClick={e => handleChange(e)} >
-                <p id="D">Ｄ。{choices[3]}</p>
-            </div>
-            <br />
+        <h3 className="centeredText">{questionNumber}. {questionData.Question}</h3>
+        <div id="A" className="unchosen" onClick={e => handleChange(e)} >
+            <p id="A">Ａ。{choices[0]}</p>
         </div>
+    
+        <div id="B" className="unchosen" onClick={e => handleChange(e)} >
+            <p id="B">Ｂ。{choices[1]}</p>
+        </div>
+    
+        <div id="C" className="unchosen" onClick={e => handleChange(e)} >
+            <p id="C">Ｃ。{choices[2]}</p>
+        </div>
+    
+        <div id="D" className="unchosen" onClick={e => handleChange(e)} >
+            <p id="D">Ｄ。{choices[3]}</p>
+        </div>
+        <br />
+    </div>
     )
+    }
+
+    else {
+        return(
+            <div></div>
+        )
     }
 
 
 
 
-
-    else {
-            return(
-                <div>
-                    <h3 className="centeredText">{questionNumber}. {questionData}</h3>
-                    <input className="inputBox" id ="box" onChange={e => handleChange(e.target.value)} />
-                </div>
-            )
-        }
-    
 
 }
 
