@@ -4,3 +4,50 @@ project	cd ~/code/projects/project2/japanese-gaming-course
 json	cd ~/code/projects/project2/json-server-template
 	json-server --watch db.json -p 2500
 
+        fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            let check=data.find(i => i.userName === formData.userName)
+           if (check !== undefined) { 
+            document.querySelector("#errorMessage").innerHTML="User already exists. Please choose another user name."
+            return 0
+        }
+
+        document.querySelector("#errorMessage").innerHTML=""
+
+        let userData = {
+            userName: formData.userName,
+            password: formData.password1,
+            password_confirmation: formData.password2,
+            email: formData.email,
+            gotHowFar: 1,
+            paidHowFar: 50,
+            quizzes: [
+              
+            ]
+          }
+
+
+
+          
+        fetch("/users/", {
+          method: 'POST',
+          headers: { 
+            'Content-Type': 'application/json',
+            accept: 'application/json' 
+          },
+          body: JSON.stringify(userData)
+        })
+        .then(res => res.json())
+  //      .then(data => console.log(data))
+        .then(history.push("/login/"))
+
+
+
+
+
+
+        })
+
+      
+        
