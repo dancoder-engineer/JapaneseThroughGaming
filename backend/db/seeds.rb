@@ -6,6 +6,14 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+User.create({
+    userName: "a",
+    password: "a",
+    email: "a",
+    gotHowFar: 1,
+    paidHowFar: 50,
+})
+
 Lesson.create({
     title: "Star Ocean",
     isgame: true
@@ -1038,6 +1046,17 @@ Question.create({
     choice4: "私のパソコンは高かったから、スイッチを買ったらよかった！||わたしの　パソコンは　たかかったから、スイッチを　かったらよかった！",
     correctChoice: "A"
 })
+
+
+
+
+
+
+
+
+
+
+
 
 
 =begin

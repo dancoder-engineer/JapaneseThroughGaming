@@ -6,6 +6,8 @@ import './styles/MainMenu.css'
 
 function Register({url}) {
 
+
+
     let history = useHistory()
 
     let [formData, setFormData] = useState({
@@ -42,6 +44,11 @@ function Register({url}) {
             return 0
         }
 
+        if (formData.password2.length === 0) { 
+            document.querySelector("#errorMessage").innerHTML="Password Can't Be Empty."
+            return 0
+        }
+
         if (formData.email.length === 0) { 
             document.querySelector("#errorMessage").innerHTML="Email Address Can't Be Empty."
             return 0
@@ -60,10 +67,11 @@ function Register({url}) {
 
         let userData = {
             userName: formData.userName,
-            password: formData.password2,
+            password: formData.password1,
+            password_confirmation: formData.password2,
             email: formData.email,
-            paidHowFar: 1,
-            canBeGraded: true,
+            gotHowFar: 1,
+            paidHowFar: 50,
             quizzes: [
               
             ]
@@ -72,7 +80,7 @@ function Register({url}) {
 
 
           
-        fetch(url, {
+        fetch("/users/", {
           method: 'POST',
           headers: { 
             'Content-Type': 'application/json',
@@ -80,6 +88,8 @@ function Register({url}) {
           },
           body: JSON.stringify(userData)
         })
+        .then(res => res.json())
+  //      .then(data => console.log(data))
         .then(history.push("/login/"))
 
 

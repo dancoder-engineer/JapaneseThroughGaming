@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :userquizzes
   resources :questions
   resources :lessons
   resources :examples
@@ -21,4 +22,9 @@ Rails.application.routes.draw do
   resources :japanesesections, only: [:index]
   resources :lessons, only: [:index, :show]
   resources :quizzes, only: [:index, :show]
+  resources :users, only: [:index, :create]
+
+  get '/userbyname/:name', to:'users#byname'
+  post '/login', to:'users#login'
+  
 end

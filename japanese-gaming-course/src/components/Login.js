@@ -18,26 +18,45 @@ function Login({url, getUserInfo}) {
 
     }
 
-
+    function oldLogin(data){
+        
+            //    console.log(data)
+              let getUser = data.find(i => i.userName === up.userName)
+            //    console.log(getUser)
+                if (getUser === undefined) {
+                    document.querySelector("#errorMessage").innerHTML = "User Not Found"
+                    return 0
+                }
+                if (getUser.password !== up.password) {
+                    document.querySelector("#errorMessage").innerHTML = "Password Wrong"
+                    return 0
+                }
+                getUserInfo(getUser)
+            
+    }
 
     function tryToLogIn(e){
         e.preventDefault()
-        fetch(url)
-        .then(res => res.json())
-        .then( data => {
-        //    console.log(data)
-          let getUser = data.find(i => i.userName === up.userName)
-        //    console.log(getUser)
-            if (getUser === undefined) {
-                document.querySelector("#errorMessage").innerHTML = "User Not Found"
-                return 0
-            }
-            if (getUser.password !== up.password) {
-                document.querySelector("#errorMessage").innerHTML = "Password Wrong"
-                return 0
-            }
-            getUserInfo(getUser)
+        fetch("/login/", {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: "POST",
+            body: JSON.stringify(up)
         })
+        .then(res => res.json())
+        .then(data => { 
+            console.log(data)
+            let getUser = data
+            if(data === null) {
+                console.log ("User name or password incorrect.")               
+            } else {
+                getUserInfo(getUser)
+            }
+        }
+        )
+      
 
     }
 

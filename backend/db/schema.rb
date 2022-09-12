@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_11_205414) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_12_013601) do
   create_table "covers", force: :cascade do |t|
     t.string "front"
     t.string "back"
@@ -103,6 +103,22 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_11_205414) do
     t.string "url"
     t.text "caption"
     t.integer "gamesection_id"
+  end
+
+  create_table "userquizzes", force: :cascade do |t|
+    t.integer "quizNo"
+    t.integer "mcScore"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "userName"
+    t.string "password_digest"
+    t.string "email"
+    t.integer "gotHowFar"
+    t.integer "paidHowFar"
   end
 
   create_table "vocabwords", force: :cascade do |t|

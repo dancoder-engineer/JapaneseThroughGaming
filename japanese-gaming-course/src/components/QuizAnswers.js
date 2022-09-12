@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+
 import { useHistory } from "react-router-dom"
 
 function QuizAnswers({answers, mcAnswers, quizData, allQuestions, useKanji}) {
@@ -8,7 +8,6 @@ function QuizAnswers({answers, mcAnswers, quizData, allQuestions, useKanji}) {
     let kanji
     if (useKanji) {kanji = 0}
     if (!useKanji) {kanji = 1}
-    let howManyMC = quizData.multipleChoiceQuestions.length
 
     //console.log(answers)
 

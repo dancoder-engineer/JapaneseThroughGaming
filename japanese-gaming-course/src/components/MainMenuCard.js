@@ -29,7 +29,7 @@ function MainMenuCard({titles, user}) {
 
     else {
 
-     if (Object.keys(user.quizzes).length < (titles.id / 5)) { 
+     if (Object.keys(user.userquizzes).length < (titles.id / 5)) { 
             link = (
             <div className="quizData">
                 <br /><br /><br /><br /><br />

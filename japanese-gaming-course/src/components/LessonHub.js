@@ -13,7 +13,7 @@ function LessonHub({lessons}) {
     const [sendToJapaneseLesson, setSendToJapaneseLesson] = useState(null)
 
     const params=useParams()
-    const lessonsurl = "http://127.0.0.1:3000/lessons/" + params.id
+    const lessonsurl = "http://127.0.0.1:5000/lessons/" + params.id
 
     useEffect(() => {
         fetch(lessonsurl)

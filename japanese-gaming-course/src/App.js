@@ -15,7 +15,7 @@ function App() {
   //app, login, register
 
   const url="http://localhost:2500/users/"
-  const lessonsurl = "http://127.0.0.1:3000/lessons"
+  const lessonsurl = "http://127.0.0.1:5000/lessons"
 
   let history = useHistory();
   let [loggedIn, setLoggedIn] = useState(false)

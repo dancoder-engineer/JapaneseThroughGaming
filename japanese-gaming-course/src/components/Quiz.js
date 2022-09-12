@@ -30,7 +30,7 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
 
 
     useEffect( () => {
-        let url="http://127.0.0.1:3000/quizzes/"+params.id
+        let url="http://127.0.0.1:5000/quizzes/"+params.id
         fetch(url)
         .then(res => res.json())
         .then(data => { 
