@@ -22,9 +22,11 @@ Rails.application.routes.draw do
   resources :japanesesections, only: [:index]
   resources :lessons, only: [:index, :show]
   resources :quizzes, only: [:index, :show]
-  resources :users, only: [:index, :create]
+  resources :users, only: [:index, :show, :create]
 
   get '/userbyname/:name', to:'users#byname'
+  get '/getme', to: 'users#getme'
+  get 'userquiz/:userid/:quizid', to:'userquizzes#userandquiz'
   post '/login', to:'users#login'
   
 end

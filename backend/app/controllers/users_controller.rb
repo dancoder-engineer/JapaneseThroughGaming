@@ -22,9 +22,23 @@ class UsersController < ApplicationController
         render json: user, status: :created
     end
 
+    def show
+        user = User.find_by(id: params[:id])
+        render json: user, status: 200
+    end
+
+    def getme
+        if session[:user]
+            user = User.find_by(id: session[:user_id])
+            render json: user, status: 200
+        else
+            return render json: {}, status: 200
+        end
+    end
+
     
     def login
-        session.delete :user
+        session.delete :user_id
       
 
     
@@ -32,10 +46,10 @@ class UsersController < ApplicationController
         user=User.find_by(username: params[:userName])
 
         if user&.authenticate(params[:password])
-            session[:user] = user
+            session[:user_id] = user
         end
       
-            render json: session[:user]
+            render json: user
       end
 
 private

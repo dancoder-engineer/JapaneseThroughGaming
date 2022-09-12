@@ -4,6 +4,30 @@ import { NavLink, Switch, useHistory } from "react-router-dom"
 
 function Login({url, getUserInfo}) {
 
+    function youGetMe() {
+        fetch("/getme/")
+        .then(res => res.json())
+        .then(data => console.log(data))
+    }
+
+    function logg(data) {
+        fetch("/login/", {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: "POST",
+            body: JSON.stringify({
+                userName: data.userName,
+                password: data.password_digest
+            })
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+    }
+
+    useEffect(() => youGetMe(), [])
+
     
     let [up, setUp] = useState({
         userName: "",
