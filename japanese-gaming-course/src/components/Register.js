@@ -54,14 +54,12 @@ function Register({url}) {
             return 0
         }
 
-        fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            let check=data.find(i => i.userName === formData.userName)
-           if (check !== undefined) { 
-            document.querySelector("#errorMessage").innerHTML="User already exists. Please choose another user name."
-            return 0
-        }
+
+   //         let check=data.find(i => i.userName === formData.userName)
+   //        if (check !== undefined) { 
+   //         document.querySelector("#errorMessage").innerHTML="User already exists. Please choose another user name."
+  //          return 0
+  //      }
 
         document.querySelector("#errorMessage").innerHTML=""
 
@@ -95,14 +93,6 @@ function Register({url}) {
 
 
 
-
-
-        })
-
-      
-        
-
-        
 
         
 
