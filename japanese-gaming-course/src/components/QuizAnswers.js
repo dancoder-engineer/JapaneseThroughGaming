@@ -53,9 +53,7 @@ function QuizAnswers({answers, mcAnswers, quizData, allQuestions, useKanji}) {
             <br />
             <br />
             {multiplechoiceAnswers}
-            
-            The open ended questions are peer graded. Once you've graded enough questions for others, fellow Japanese learners will grade your questions. Keep an eye on your quiz info below for more info.
-            
+             
         </div>
     )
 }
