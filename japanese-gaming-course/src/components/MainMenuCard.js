@@ -1,19 +1,24 @@
-import React from "react"
+import  React, {useState, useEffect} from "react"
 import { NavLink } from "react-router-dom";
 import './styles/MainMenu.css';
 
 function MainMenuCard({titles, user}) {
+    const [usr, setUsr] = useState(null)
 
     let quizId = "quiz" + titles.id / 5
     
     let link
 
-
+    useEffect(() => { 
+        youGetMe()
+    }, [])
 
     function youGetMe() {
-        fetch("/getme/")
+        fetch("/users/2")
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => {//console.log(data)
+            setUsr(data)
+        })
     }
 
 
@@ -33,8 +38,8 @@ function MainMenuCard({titles, user}) {
     )}
 
     else {
-
-     if (Object.keys(user.userquizzes).length < (titles.id / 5)) { 
+        if (usr) {
+     if (Object.keys(usr.userquizzes).length < (titles.id / 5)) { 
     //    if (3 > 1) { console.log(quizId.split("z")[1])
             link = (
             <div className="quizData">
@@ -53,9 +58,9 @@ function MainMenuCard({titles, user}) {
             link = (
             <div className="quizData">
                 <br /><br />
-                <p>Quiz taken.<br />
-                Grade: {user["userquizzes"][qId]["mcScore"]}%<br />
-                </p>
+                {usr && (<p>Quiz taken.<br />
+                Grade: {usr["userquizzes"][qId]["mcScore"]}%<br />
+                </p>) }
                 <NavLink to={`/quiz/${titles.id / 5}/`}>Retake Quiz</NavLink>
                 <p>Warning: Retaking the quiz will erase all current records upon grading.</p>
             </div>
@@ -65,7 +70,7 @@ function MainMenuCard({titles, user}) {
     }
        
         
-        
+}
     
 
         // <div><ruby>腐<rt>くさ</rt></ruby>った<ruby>寿司<rt>すし</rt></ruby>を<ruby>食<rt>た</rt></ruby>べるな</div>

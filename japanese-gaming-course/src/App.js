@@ -30,7 +30,7 @@ function App() {
     setLoggedIn(true)
     setUser({...getUser})
     history.push("/")
-    console.log(getUser)
+  //  console.log(getUser)
   }
 
 

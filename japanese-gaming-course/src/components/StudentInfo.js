@@ -8,8 +8,7 @@ function StudentInfo({loggedIn, user}) {
     let quizList = []
     const history = useHistory()
 
-    console.log(user.canBeGraded)
-
+  
     
         for (let quiz in user.quizzes){
             quizList.push(<StudentInfoQuizHistory quiz={user.quizzes[quiz]} />)

@@ -6,8 +6,11 @@ import QuizAnswers from "./QuizAnswers.js"
 
 function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
 
+    const passingGrade = 65
     let userUrl = url+userId
-    //console.log(userUrl)
+    let userQuizData = {}
+   // let userId = null
+    ////console.log(userUrl)
     
     const params = useParams()
 
@@ -16,7 +19,7 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
    // let noOfQuestions = 0
  //  let mcAnswers = 0
     let [questionData, setQuestionData] = useState(null)
-    
+   // let [oldGrade, setOldGrade] = useState(null)
     let [quizData, setQuizData] = useState(null)
     let [questionNumber, setQuestionNumber] = useState(1)
     let [useKanji, setUseKanji] = useState(true)
@@ -25,11 +28,12 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
     let [answers, setAnswers] = useState([])
     let [quizGoingOn, setQuizGoingOn] = useState(true)
     let [mcAnswers, setMcAnswers] = useState(null)
-    
+        
 
 
 
     useEffect( () => {
+        
         let url="/quizzes/"+params.id
         fetch(url)
         .then(res => res.json())
@@ -63,7 +67,7 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
             quizNo: params.id,
             multipleChoiceQuestions: mcq
         }
-        console.log("qdata", qData)
+        //console.log("qdata", qData)
         setNoOfQuestions(qData.multipleChoiceQuestions.length)
         setMcAnswers(qData.multipleChoiceQuestions.map(i => i.correctChoice))
         setQuestionData(qData.multipleChoiceQuestions[0])
@@ -93,7 +97,7 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
             tempAnswer[questionNumber-1] = answer
         }
 
-        console.log(tempAnswer)
+        //console.log(tempAnswer)
         setAnswers([...tempAnswer])
     }
 
@@ -112,7 +116,7 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
     }
 
     function clearAnswers() {
-        console.log(answers)
+        //console.log(answers)
 
         if ( questionType === "multipleChoiceQuestions") {
             let oldChoice = document.querySelectorAll(".chosen")
@@ -147,7 +151,7 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
 
 
 
-    function gradeQuiz() {
+    function getGrade() {
         let right=0
         let ques="question"
         for (let i=0; i < quizData.multipleChoiceQuestions.length; i++) {
@@ -174,22 +178,14 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
            
                 }
             
+                return Math.floor(right/quizData.multipleChoiceQuestions.length*100)
           
-          user.canBeGraded = false
-          let fullquizzes = {...user, quizzes}
+        //  user.canBeGraded = false
+       //   let fullquizzes = {...user, quizzes}
           
-      // console.log(user)
+      // //console.log(user)
         
-       fetch(userUrl, {
-           method: 'PATCH',
-           headers: {'Content-Type': 'application/json'},
-           body: JSON.stringify(fullquizzes)
-       })
-       .then(res => res.json())
-       .then(data => {
-        updateUserInfo(data)
-        setQuizGoingOn(!quizGoingOn)
-       })
+
 
     }
     // <p className="centeredText">Question {questionNumber} of {noOfQuestions}</p>
@@ -229,9 +225,113 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
     }
 
 
+    function openNextChapter(uid) { 
+        let url = "/users/" + uid
+//console.log("url", url)
+        fetch(url, {
+                
+            method: 'PATCH',
+            headers: { 
+              'Content-Type': 'application/json',
+              accept: 'application/json' 
+            },
+            body: JSON.stringify({gotHowFar: parseInt(params.id) + 1})
+          })
+          .then(res => res.json())
+          .then(() => setgoingOn())
+    
+
+    }
+
+    function processGrade(userQuizData) { 
+             /*
+   
+        //console.log(passingGrade, userQuizData.mcScore, userQuizData.mcScore >= passingGrade)
+        //console.log(userQuizData.user.gotHowFar, params.id, userQuizData.user.gotHowFar <= params.id)
+        //console.log((userQuizData.mcScore >= passingGrade) && (userQuizData.user.gotHowFar <= params.id))
+        //get 'userquiz/:userid/:quizid', to:'userquizzes#userandquiz'
+
+                "id": 1,
+                "quizNo": 1,
+                "mcScore": 65,
+                "user_id": 1
+       
+       //console.log("full data", userQuizData)
+        //console.log("quiz id", params.id)
+        //console.log("user id", userId)
+        //console.log("old grade", userQuizData.mcScore)
+        //console.log("grade", getGrade())
+
+        */
+
+          let url = "/userquizzes/" + userQuizData.id
+
+        fetch(url, {
+            method: 'PATCH',
+            headers: { 
+              'Content-Type': 'application/json',
+              accept: 'application/json' 
+            },
+            body: JSON.stringify({mcScore: getGrade()})
+          })
+          .then(res => res.json())
+          .then(data => { 
+            if ((userQuizData.mcScore >= passingGrade) && (userQuizData.user.gotHowFar <= params.id)) {
+                openNextChapter(data.user.id)
+            }
+            else { setgoingOn() }
+          }
+            )
+      
+        //if grade > 65, gotthrough == quizid + 1
+      
+    }
+
+    function createNewQuiz() {
+        let uq = {
+            quizNo: params.id,
+            mcScore: getGrade(),
+            user_id: userId
+        }
+        //console.log(uq)
+        
+        let url = "/userquizzes/"
+
+        fetch(url, {
+            method: 'POST',
+            headers: { 
+              'Content-Type': 'application/json',
+              accept: 'application/json' 
+            },
+            body: JSON.stringify(uq)
+          })
+          .then(res => res.json())
+          .then(data => { //console.log(data)
+            if ((uq.mcScore >= passingGrade) && (data.user.gotHowFar <= params.id)) {
+                openNextChapter(data.user.id)
+            }
+            else { setgoingOn() }
+          }
+            )
+
+    }
+
+    function gradeQuiz() {
+
+        fetch("/userquiz/" + userId + "/" + params.id)
+        .then(res => res.json())
+        .then(data => {
+            if (!data) { createNewQuiz(data) }
+            else { processGrade(data) }
+        })
+        
+     
+    }
 //246:  {quizGoingOn ? questionComponent : null}
     return (
         <div className="quizPage">
+            
+
             <div className="questionNumber">{quizGoingOn ? kanjiButton : quizAnswers}</div>
 
             
@@ -249,7 +349,7 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
 
 
 
-
+           
 
             <div className="middleForDev" onClick={setgoingOn}>
                 <p className="centeredText" id="grade"></p>

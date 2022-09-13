@@ -4,6 +4,8 @@ import { NavLink, Switch, useHistory } from "react-router-dom"
 
 function Login({url, getUserInfo}) {
 
+    const [errorMessage, setErrorMessage] = useState("")
+
     function youGetMe() {
         fetch("/getme/")
         .then(res => res.json())
@@ -73,8 +75,8 @@ function Login({url, getUserInfo}) {
         .then(data => { 
             console.log(data)
             let getUser = data
-            if(data === null) {
-                console.log ("User name or password incorrect.")               
+            if(data.error) {
+                setErrorMessage("User name or password incorrect.")               
             } else {
                 getUserInfo(getUser)
             }
@@ -89,7 +91,7 @@ function Login({url, getUserInfo}) {
     <div>
         <h1 className="centeredText">Japanese through JRPGs</h1>
         <h2 className="centeredText">Login</h2>
-        <p className="error" id="errorMessage"></p>
+        <p className="error" id="errorMessage">{errorMessage}</p>
         <form>
         <p className="centeredText">User Name: <input id="userName" onChange={e => handleChange(e)} /></p>
         <p className="centeredText">Password: <input id="password" type="password" onChange={e => handleChange(e)} /></p>

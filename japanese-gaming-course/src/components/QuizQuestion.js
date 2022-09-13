@@ -3,7 +3,7 @@ import './styles/Quiz.css'
 
 function QuizQuestion({questionData, useKanji, questionType, questionNumber, handleChange, answers}) {
 
-    console.log(questionData)
+  //  console.log(questionData)
     let choices
 
     if ( questionData) {

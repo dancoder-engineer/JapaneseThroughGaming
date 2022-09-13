@@ -41,15 +41,20 @@ class UsersController < ApplicationController
         session.delete :user_id
       
 
-    
-
         user=User.find_by(username: params[:userName])
 
         if user&.authenticate(params[:password])
-            session[:user_id] = user
+            session[:user_id] = user[:id]
+            return render json: user
         end
-      
-            render json: user
+            return render json: {error:"Not logged in"}
+            
+      end
+
+      def update
+        user = User.find_by(id: params[:id])
+        user.update(allowed)
+        render json: user
       end
 
 private
