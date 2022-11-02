@@ -48,10 +48,12 @@ function LessonHub({lessons}) {
       }
 
       function formatSendToCommentary(data) {
-        let gameCopy = data.paragraphs.map((i) => i.text )
+        console.log(data)
+        let gameCopy = data.gamesection.reviewtext.split("||")
         setSendToCommentary({
             gameCopy: gameCopy,
-            screenshots: data.screenshots
+            screenshoturls: data.gamesection.screenshoturls.split("||"),
+            screenshottext: data.gamesection.screenshottext.split("||")
         })
         
       }

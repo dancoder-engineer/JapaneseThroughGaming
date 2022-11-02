@@ -1,5 +1,5 @@
 class GamesectionSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :reviewtext, :screenshottext, :screenshoturls
   has_many :releases
   has_one :cover
   has_many :otherpics, through: :cover

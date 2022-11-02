@@ -31,6 +31,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_12_013601) do
 
   create_table "gamesections", force: :cascade do |t|
     t.integer "lesson_id"
+    t.text "reviewtext"
+    t.text "screenshoturls"
+    t.text "screenshottext"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

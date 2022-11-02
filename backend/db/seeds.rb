@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+
+#Lesson.destroy_all
+
 User.create({
     userName: "a",
     password: "a",
@@ -16,11 +19,14 @@ User.create({
 
 Lesson.create({
     title: "Star Ocean",
-    isgame: true
-})
+    isgame: true,
+    })
 
 Gamesection.create({
-    lesson_id: 1
+    lesson_id: 1,
+    reviewtext: "Star Ocean, released July 19, 1996, was a true demonstration of what the Super Famicom was truly capable of. While it weighed in at a massive 6 megabytes, the game was actually much larger, and only fit on a cartridge double the size of Final Fantasy 6's due to graphics compression allowed by the S-DD1 chip. The chip was only ever used in two Super Famicom games (The other being Street Fighter Alpha 2,) thanks to the fact that the 32 bit era was rapidly picking up steam in 1996.||The story, heavly influenced by Star Trek, involves the crew of the 'federation' starship Calnus investgating a virus on Planet Roak. The Calnus crew is seen beaming down by natives of the less technologiclally advanced planet, running  afoul of the 'Underdeveloped Planet Preservation Pact.' The Roak natives initially think the Calnus crew are gods, but the Calnus crew explain otherwise. Eventually, both space travelers and Roakians alike go 300 years in the past, to a time where they're able to save the planet, eventually going back to the present and stopping 'Jie Revorse' and his genetically enhanced supermen from taking over the universe.||I joke, of course, but the game is incredible. It features a very cinematic, fully (English) voiced intro cutscene featuring Robert Belgrade, who would go on to voice Alucard in the English version of Castlevania: Symphony of the Night. The game also boasts an amazing soundtrack by Motoi Sakuraba which sounds higher quality than almost anything else on the system, a really fun action battle system, and gameplay systems that wouldn't become common until well into the Playstation's life (you like item creation systems? Thank Star Ocean.)||As for that item creation system, it’s very much a mixed bag. While it can be fun, there are a very small number of ultimate items that can be made only through that system. Nowhere in the game does it tell you the formulas, and some of the items used to make the better weapons and armor are either very expensive, or one of a kind, meaning its possible to use them up and make it so that you permeant lose the item you want to make. You can also fail at creating items, and if you fail, you lose the materials.||The music is one of the best aspects of the game. This is Motoi Sakuraba when he was actually trying, and the difference between the music here and the music in Tales of Arise is night and day. The compositions would've sounded good if the game were on PlayStation, let alone the Super NES. The battle system is action based, with the player controlling one character while the rest of the party fights by themselves. You can give orders to the party members not under your direct control, but there’s not much to the battle system. The main reason for that is the fact that almost all battles can be won simply by button mashing. Any battle that can’t be on by button mashing can be won by leveling up and then button mashing. There’s also a fairly deep skill system, where skill points, earned on level up, can be used to purchase stat increases, the ability to better make use of the game’s deep item creation system, or new moves in battle.||Honestly, Star Ocean is one of the most impressive games on the SNES, and a small glimpse of what other games could've been if they released that CD addon. The second half had to be scaled back (and that content was not all added back in the remake,) but what's there is a gem on the Super Famicom that shows why people still care about the series to this day.",
+    screenshoturls: "https://i.imgur.com/2ivwFoq.png||https://i.imgur.com/Dwt4Hgg.png||https://i.imgur.com/PJnmSNR.png",
+	screenshottext: "The main character's name is Ratix. This was changed in the American localization because they didn't want everyone to go all Phantasmagoria 2 and start nicknaming him Ratboy. The original version of the game allows you to give the characters nicknames (which was cut out of all language versions of the PSP remake,) so you can nickname him Ratboy in the game itself if you so choose.||In this scene, everyone finds out that Dorn (named after Star Trek: TNG's Michael Dorn) has the virus, Bonus Japanese lesson: 感染する　(かんせんする) means 'to get infected.'||Many environments in this game have a cel-shaded look, quite rare on the Super Famicom, but very beautiful and appreciated.",
 })
 
 Release.create({
@@ -60,51 +66,9 @@ Otherpic.create({
     cover_id: 1
 })
 
-Paragraph.create({
-    gamesection_id: 1,
-    text: "Star Ocean, released July 19, 1996, was a true demonstration of what the Super Famicom was truly capable of. While it weighed in at a massive 6 megabytes, the game was actually much larger, and only fit on a cartridge double the size of Final Fantasy 6's due to graphics compression allowed by the S-DD1 chip. The chip was only ever used in two Super Famicom games (The other being Street Fighter Alpha 2,) thanks to the fact that the 32 bit era was rapidly picking up steam in 1996."
-})
 
-Paragraph.create({
-    gamesection_id: 1,
-    text: "The story, heavly influenced by Star Trek, involves the crew of the 'federation' starship Calnus investgating a virus on Planet Roak. The Calnus crew is seen beaming down by natives of the less technologiclally advanced planet, running  afoul of the 'Underdeveloped Planet Preservation Pact.' The Roak natives initially think the Calnus crew are gods, but the Calnus crew explain otherwise. Eventually, both space travelers and Roakians alike go 300 years in the past, to a time where they're able to save the planet, eventually going back to the present and stopping 'Jie Revorse' and his genetically enhanced supermen from taking over the universe."
-})
 
-Paragraph.create({
-    gamesection_id: 1,
-    text: "I joke, of course, but the game is incredible. It features a very cinematic, fully (English) voiced intro cutscene featuring Robert Belgrade, who would go on to voice Alucard in the English version of Castlevania: Symphony of the Night. The game also boasts an amazing soundtrack by Motoi Sakuraba which sounds higher quality than almost anything else on the system, a really fun action battle system, and gameplay systems that wouldn't become common until well into the Playstation's life (you like item creation systems? Thank Star Ocean.)"
-})
-Paragraph.create({
-    gamesection_id: 1,
-    text: "As for that item creation system, it’s very much a mixed bag. While it can be fun, there are a very small number of ultimate items that can be made only through that system. Nowhere in the game does it tell you the formulas, and some of the items used to make the better weapons and armor are either very expensive, or one of a kind, meaning its possible to use them up and make it so that you permeant lose the item you want to make. You can also fail at creating items, and if you fail, you lose the materials."
-})
-Paragraph.create({
-    gamesection_id: 1,
-    text: "The music is one of the best aspects of the game. This is Motoi Sakuraba when he was actually trying, and the difference between the music here and the music in Tales of Arise is night and day. The compositions would've sounded good if the game were on PlayStation, let alone the Super NES. The battle system is action based, with the player controlling one character while the rest of the party fights by themselves. You can give orders to the party members not under your direct control, but there’s not much to the battle system. The main reason for that is the fact that almost all battles can be won simply by button mashing. Any battle that can’t be on by button mashing can be won by leveling up and then button mashing. There’s also a fairly deep skill system, where skill points, earned on level up, can be used to purchase stat increases, the ability to better make use of the game’s deep item creation system, or new moves in battle."
-})
 
-Paragraph.create({
-    gamesection_id: 1,
-    text: "Honestly, Star Ocean is one of the most impressive games on the SNES, and a small glimpse of what other games could've been if they released that CD addon. The second half had to be scaled back (and that content was not all added back in the remake,) but what's there is a gem on the Super Famicom that shows why people still care about the series to this day."
-})
-
-Screenshot.create({
-    url: "https://i.imgur.com/2ivwFoq.png",
-    caption: "The main character's name is Ratix. This was changed in the American localization because they didn't want everyone to go all Phantasmagoria 2 and start nicknaming him Ratboy. The original version of the game allows you to give the characters nicknames (which was cut out of all language versions of the PSP remake,) so you can nickname him Ratboy in the game itself if you so choose.",
-    gamesection_id: 1
-})
-
-Screenshot.create({
-    url: "https://i.imgur.com/Dwt4Hgg.jpg",
-    caption: "In this scene, everyone finds out that Dorn (named after Star Trek: TNG's Michael Dorn) has the virus, Bonus Japanese lesson: 感染する　(かんせんする) means 'to get infected.'",
-    gamesection_id: 1
-})
-
-Screenshot.create({
-    url: "https://i.imgur.com/PJnmSNR.png",
-    caption: "Many environments in this game have a cel-shaded look, quite rare on the Super Famicom, but very beautiful and appreciated.",
-    gamesection_id: 1
-})
 
 Japanesesection.create({
     lesson_id: 1,
@@ -193,7 +157,10 @@ Lesson.create({
 })
 
 Gamesection.create({
-    lesson_id: 2
+    lesson_id: 2,
+    reviewtext: "Tales of Destiny is the second title in the Tales series. Coming two years after the first one, and possibly being moved from Nintendo 64 (there were rumors of ‘Tales of Phantasia 2’ for N64 at one point, but it never materialized, and there doesn't seem to be any concrete information about this. The game has some high points, and some really low points.||The highest point is that it has one of the greatest game soundtracks ever made. Almost every song is worth listening to, which is a major feat as for as video game soundtracks go, especially among the Tales series, where soundtracks consist about 20% good songs and 80% filler.||Some of the low points are the battle system, which is pretty much just lifted straight out of Tales of Phantasia and has not aged well to the point where if you play the original Tales of Destiny (we'll get to the remake in a bit) after playing most Tales games that came after it, the game is pretty much unplayable. Couple that with an absolutely insane random encounter rate, and you have a game that's a flat out chore to play.||Even with this mixed bag of elements throughout, the game also varies in quality depending on how far into it you get.||The first half of the game is incredible, giving you one of the Tales series's best casts on an adventure to recover a powerful artifact known as the Eye of God (or Atamoni depending on which version of the game you're playing) before it can be used to take over the world.||The pacing takes a major hit in the second half. While the story itself remains good, bringing the villains into focus and giving them good motivations, the game becomes a major chore to play. After a certain emotional scene about halfway through, you go to a second world map and the game becomes more of a dungeon crawler where the dungeons aren't very fun to play.||Most of them take the form of transporter mazes where you have to go up and down just to find the way to the end, occasionally broken up by puzzles, and there are far too many dungeons, the sheer number of which makes the plot feel like it stops short. For example, let's look at the first mission in this area, go to a dungeon and do a thing (no spoilers.) Instead of going onto a world map, into the dungeon, finishing it and going back to where you started, you have to:||1. Go through a section of a world map, which is so much of a maze, it may as well be a mini dungeon in itself.||2. Go through one dungeon to teleport to another||3. Go through that dungeon to get back to the world map||4. Go through another mini dungeon on the world map||5. Finally get to the dungeon you were aiming for.||That's essentially five dungeons where one would've done the trick nicely, and the game continues like this for at least a quarter of its total time!||The remake, which came out as the last Tales game on the PlayStation 2, released right in the middle of the series’ golden age, gives us some new plot elements, as well as skits and a totally new battle system. The battle system completely does away with TP, rather focusing on what you can do in individual combos by having moves use CC, a new type of TP which recovers after each combo. The battle system is really fun, so that fixes that problem from the original. If only the rest of the original's problems were fixed as well.||The pacing issues? Still there in their entirety. The new battle system makes the second half less of a slog, but it's still a slog due to the fact that the dungeons are still the same mazes of transporters. There are new puzzles here and there, but the dungeons really haven't changed much, which is a huge negative in this game.||There is a Director's Cut of the remake, which adds ‘Leon Side,’ a mode where you play the first half of the story with Leon as the main character, and stops right before the second half of the game starts. It won't give you the full story of the game, but it will give you a full story with a beginning, middle, and end which stops before the game gets annoying, and is therefore probably the best way to play the game.||Tales of Destiny can be a joy to play, but at times is also a massive pain. If the story grabs you enough, it can be worth forcing yourself through the second half of the game to see how things turn out, but otherwise the second half is just gonna sap your patience.||Fun Fact: Hikaru Midorikawa, the voice actor for the anti-social Leon also did the voice of Hiro in the 32-bit remake of Lunar 2. Guy's got range.",
+    screenshoturls: "https://i.imgur.com/87xpWxF.png||https://i.imgur.com/t2vNONX.png||https://i.imgur.com/QfMUVSc.png",
+    screenshottext: "You know it's time for some serious therapy when you have to call your father -sama.||The battle system in this game is seriously great. So great, in fact, that they used a slightly modified version for Tales of Hearts. Unfortunately, it wasn't good enough to keep in the Vita remake of Tales of Hearts.||Tales of Destiny's cast has always been it's greatest asset, and the remake adds tons of new interactions to make this aspect of the game even better. From tons of new skits to new story scenes that really flesh out these characters, they did a great job here.",
 })
 
 Release.create({
@@ -240,99 +207,7 @@ Otherpic.create({
 
 
 
-Paragraph.create({
-    gamesection_id: 2,
-    text: "Tales of Destiny is the second title in the Tales series. Coming two years after the first one, and possibly being moved from Nintendo 64 (there were rumors of ‘Tales of Phantasia 2’ for N64 at one point, but it never materialized, and there doesn't seem to be any concrete information about this. The game has some high points, and some really low points."
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "The highest point is that it has one of the greatest game soundtracks ever made. Almost every song is worth listening to, which is a major feat as for as video game soundtracks go, especially among the Tales series, where soundtracks consist about 20% good songs and 80% filler."
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "Some of the low points are the battle system, which is pretty much just lifted straight out of Tales of Phantasia and has not aged well to the point where if you play the original Tales of Destiny (we'll get to the remake in a bit) after playing most Tales games that came after it, the game is pretty much unplayable. Couple that with an absolutely insane random encounter rate, and you have a game that's a flat out chore to play."
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "Even with this mixed bag of elements throughout, the game also varies in quality depending on how far into it you get."
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "The first half of the game is incredible, giving you one of the Tales series's best casts on an adventure to recover a powerful artifact known as the Eye of God (or Atamoni depending on which version of the game you're playing) before it can be used to take over the world."
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "The pacing takes a major hit in the second half. While the story itself remains good, bringing the villains into focus and giving them good motivations, the game becomes a major chore to play. After a certain emotional scene about halfway through, you go to a second world map and the game becomes more of a dungeon crawler where the dungeons aren't very fun to play."
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "Most of them take the form of transporter mazes where you have to go up and down just to find the way to the end, occasionally broken up by puzzles, and there are far too many dungeons, the sheer number of which makes the plot feel like it stops short. For example, let's look at the first mission in this area, go to a dungeon and do a thing (no spoilers.) Instead of going onto a world map, into the dungeon, finishing it and going back to where you started, you have to:"
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "1. Go through a section of a world map, which is so much of a maze, it may as well be a mini dungeon in itself."
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "2. Go through one dungeon to teleport to another"
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "3. Go through that dungeon to get back to the world map"
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "4. Go through another mini dungeon on the world map"
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "5. Finally get to the dungeon you were aiming for."
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "That's essentially five dungeons where one would've done the trick nicely, and the game continues like this for at least a quarter of its total time!"
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "The remake, which came out as the last Tales game on the PlayStation 2, released right in the middle of the series’ golden age, gives us some new plot elements, as well as skits and a totally new battle system. The battle system completely does away with TP, rather focusing on what you can do in individual combos by having moves use CC, a new type of TP which recovers after each combo. The battle system is really fun, so that fixes that problem from the original. If only the rest of the original's problems were fixed as well."
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "The pacing issues? Still there in their entirety. The new battle system makes the second half less of a slog, but it's still a slog due to the fact that the dungeons are still the same mazes of transporters. There are new puzzles here and there, but the dungeons really haven't changed much, which is a huge negative in this game."
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "There is a Director's Cut of the remake, which adds ‘Leon Side,’ a mode where you play the first half of the story with Leon as the main character, and stops right before the second half of the game starts. It won't give you the full story of the game, but it will give you a full story with a beginning, middle, and end which stops before the game gets annoying, and is therefore probably the best way to play the game."
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "Tales of Destiny can be a joy to play, but at times is also a massive pain. If the story grabs you enough, it can be worth forcing yourself through the second half of the game to see how things turn out, but otherwise the second half is just gonna sap your patience."
-})
-Paragraph.create({
-    gamesection_id: 2,
-    text: "Fun Fact: Hikaru Midorikawa, the voice actor for the anti-social Leon also did the voice of Hiro in the 32-bit remake of Lunar 2. Guy's got range."
-})
 
-
-
-
-Screenshot.create({
-    url: "https://i.imgur.com/87xpWxF.png",
-    caption: "You know it's time for some serious therapy when you have to call your father -sama.",
-    gamesection_id: 2
-})
-
-Screenshot.create({
-    url: "https://i.imgur.com/t2vNONX.png",
-    caption: "The battle system in this game is seriously great. So great, in fact, that they used a slightly modified version for Tales of Hearts. Unfortunately, it wasn't good enough to keep in the Vita remake of Tales of Hearts.",
-    gamesection_id: 2
-})
-
-Screenshot.create({
-    url: "https://i.imgur.com/QfMUVSc.png",
-    caption: "Tales of Destiny's cast has always been it's greatest asset, and the remake adds tons of new interactions to make this aspect of the game even better. From tons of new skits to new story scenes that really flesh out these characters, they did a great job here.",
-    gamesection_id: 2
-})
 
 
 
@@ -492,7 +367,10 @@ Lesson.create({
 })
 
 Gamesection.create({
-    lesson_id: 3
+    lesson_id: 3,
+    reviewtext: "The Legend of Zelda: Link's Awakening (The Dreaming Island in Japan, see the Japanese lesson for further details on that,) is one of the best games the Zelda series has ever produced. The reason for this is fairly obvious, while most games are produced as someone's 9-5 job, this one was a labor of love. The team behind it developed the game after work while working on other things during the day, and the fun they had working on it comes across while playing it. This sort of development also happened on another game that's considered a masterpiece, Mega Man 2.||The story involves the same Link from Link to the Past getting shipwrecked on an island to the south of Hyrule, where he can't leave unless he wakes the island's deity, known as the Wind Fish. The story takes a major turn around Level 6 that recontextualizes everything and forces Link to make a major decision about the right way to proceed, culminating in an ending with levels of emotion you didn't really see in 8-bit RPGs (except Final Fantasy Adventure.)||Of course, the best thing about this game's story are the individual characters you'll meet along the way and the cool moments that stick with you. For example, if you can't afford the (really expensive) bow, you can steal it from the shop. If you do this, the next time you go into the store, the store owner will zap you with lightning, killing you outright, and everyone in the game will call you THIEF instead of your name.||Back in 1993, when you bought a handheld game, you tended to get a scaled down version of its home console equivalent. This is, of course, because of a major difference in technology between a 4 color Game Boy and a 16-bit powerhouse Super NES. Link's Awakening, however, does not scale down the gameplay of Link to the Past at all. Because of this, Link's Awakening easily qualifies as a top 10 Game Boy game. The game is even loved enough to have gotten a remake on the Switch, which is something no one would have guessed would happen.||The not toned down gameplay did have one caveat, however. If you ask most people what Link's Awakening's major drawback is, they'll tell you that you have to switch items a lot. While this can be annoying, this was unavoidable. In Link to the Past, you had three action buttons in game: A sword button, an button that lets you use an item of your choosing, and one that has many common actions mapped to it (lifting items, dashing etc.) The Game Boy only had two buttons to work with, so they made both of them use items that you select, and made the sword, the dash boots, the power glove, and many others items that you map to those buttins at will. This forces the player to open the menu and switch items far more than in other Zelda games, which can be annoying, but was a fair compromise, and honestly the only way they could've made this game without scaling back the gameplay to Zelda 1 levels.||The soundtrack by Kazumi Totaka, Minako Hamano, and Kozue Ishikawa is excellent, boasting many amazing tracks. Highlights include the Face Shrine, the Wind Fish's Egg, and of course the Ballad of the Wind Fish (which even got lyrics in the Switch remake.) The only weak link is the Angler's Tunnel theme. Back in the day, I was really enjoying the level themes, and by the time I was going for level 4, I was looking forward to them. Then I entered level 4 and heard a sped up version of the cave theme. This was probably one of the most disappointing musical experiences of my young life. It's only one song, but the disappointment was memorable enough to leave an impression on me.||Link's Awakening is a true classic, and deserves to be played by any fan of the Zelda series, whether they were born in 1993 or not. And for my fellow old geezers, the game is 28 years old now, so there many Zelda fans that weren't born when we were screwing up our eyesight for life staring at that unlit 4 color screen for hours on end.||And one more thing, the next time you're playing Ocarina of Time, don't forget to lose to the final boss so that this and Link to the Past (the best Zelda games) come to pass.",
+    screenshoturls: "https://i.imgur.com/qHQd8pR.png||https://i.imgur.com/HbJNu5I.png||",
+    screenshottext: "No!!! Not the owl!!! Aaaaah, shut up, shut up, SHUT UP!!!!! Actually, he's not as annoying in this game. He serves more as a form of exposition than one of obnoxious tutorials.||Stealing in this game is one of the more memorable cheats in gaming, due to the fact that it has interesting consequences. Of course, I also wonder if this shopkeeper is in the mafia with the way he treats people who steal from him.||This game did the Nintendo characters crossover thing way before Smash. You'll Yoshi, Mario, and even a visitor from SimCity.",
 })
 
 Release.create({
@@ -533,63 +411,7 @@ Otherpic.create({
     cover_id: 3
 })
 
-Paragraph.create({
-    gamesection_id: 3,
-    text: "The Legend of Zelda: Link's Awakening (The Dreaming Island in Japan, see the Japanese lesson for further details on that,) is one of the best games the Zelda series has ever produced. The reason for this is fairly obvious, while most games are produced as someone's 9-5 job, this one was a labor of love. The team behind it developed the game after work while working on other things during the day, and the fun they had working on it comes across while playing it. This sort of development also happened on another game that's considered a masterpiece, Mega Man 2.",
-})
 
-Paragraph.create({
-    gamesection_id: 3,
-    text: "The story involves the same Link from Link to the Past getting shipwrecked on an island to the south of Hyrule, where he can't leave unless he wakes the island's deity, known as the Wind Fish. The story takes a major turn around Level 6 that recontextualizes everything and forces Link to make a major decision about the right way to proceed, culminating in an ending with levels of emotion you didn't really see in 8-bit RPGs (except Final Fantasy Adventure.)",
-})
-
-Paragraph.create({
-    gamesection_id: 3,
-    text: "Of course, the best thing about this game's story are the individual characters you'll meet along the way and the cool moments that stick with you. For example, if you can't afford the (really expensive) bow, you can steal it from the shop. If you do this, the next time you go into the store, the store owner will zap you with lightning, killing you outright, and everyone in the game will call you THIEF instead of your name.",
-})
-
-Paragraph.create({
-    gamesection_id: 3,
-    text: "Back in 1993, when you bought a handheld game, you tended to get a scaled down version of its home console equivalent. This is, of course, because of a major difference in technology between a 4 color Game Boy and a 16-bit powerhouse Super NES. Link's Awakening, however, does not scale down the gameplay of Link to the Past at all. Because of this, Link's Awakening easily qualifies as a top 10 Game Boy game. The game is even loved enough to have gotten a remake on the Switch, which is something no one would have guessed would happen.",
-})
-
-Paragraph.create({
-    gamesection_id: 3,
-    text: "The not toned down gameplay did have one caveat, however. If you ask most people what Link's Awakening's major drawback is, they'll tell you that you have to switch items a lot. While this can be annoying, this was unavoidable. In Link to the Past, you had three action buttons in game: A sword button, an button that lets you use an item of your choosing, and one that has many common actions mapped to it (lifting items, dashing etc.) The Game Boy only had two buttons to work with, so they made both of them use items that you select, and made the sword, the dash boots, the power glove, and many others items that you map to those buttins at will. This forces the player to open the menu and switch items far more than in other Zelda games, which can be annoying, but was a fair compromise, and honestly the only way they could've made this game without scaling back the gameplay to Zelda 1 levels.",
-})
-
-Paragraph.create({
-    gamesection_id: 3,
-    text: "The soundtrack by Kazumi Totaka, Minako Hamano, and Kozue Ishikawa is excellent, boasting many amazing tracks. Highlights include the Face Shrine, the Wind Fish's Egg, and of course the Ballad of the Wind Fish (which even got lyrics in the Switch remake.) The only weak link is the Angler's Tunnel theme. Back in the day, I was really enjoying the level themes, and by the time I was going for level 4, I was looking forward to them. Then I entered level 4 and heard a sped up version of the cave theme. This was probably one of the most disappointing musical experiences of my young life. It's only one song, but the disappointment was memorable enough to leave an impression on me.",
-})
-
-Paragraph.create({
-    gamesection_id: 3,
-    text: "Link's Awakening is a true classic, and deserves to be played by any fan of the Zelda series, whether they were born in 1993 or not. And for my fellow old geezers, the game is 28 years old now, so there many Zelda fans that weren't born when we were screwing up our eyesight for life staring at that unlit 4 color screen for hours on end.",
-})
-
-Paragraph.create({
-    gamesection_id: 3,
-    text: "And one more thing, the next time you're playing Ocarina of Time, don't forget to lose to the final boss so that this and Link to the Past (the best Zelda games) come to pass.",
-})
-
-Screenshot.create({
-    url: "https://i.imgur.com/qHQd8pR.png",
-    caption: "No!!! Not the owl!!! Aaaaah, shut up, shut up, SHUT UP!!!!! Actually, he's not as annoying in this game. He serves more as a form of exposition than one of obnoxious tutorials.",
-    gamesection_id: 3
-})
-
-Screenshot.create({
-    url: "https://i.imgur.com/HbJNu5I.png",
-    caption: "Stealing in this game is one of the more memorable cheats in gaming, due to the fact that it has interesting consequences. Of course, I also wonder if this shopkeeper is in the mafia with the way he treats people who steal from him.",
-    gamesection_id: 3
-})
-
-Screenshot.create({
-    url: "https://i.imgur.com/G0eOI0v.png",
-    caption: "This game did the Nintendo characters crossover thing way before Smash. You'll Yoshi, Mario, and even a visitor from SimCity.",
-    gamesection_id: 3
-})
 
 Japanesesection.create({
     lesson_id: 3,
@@ -728,8 +550,11 @@ Lesson.create({
 })
 
 Gamesection.create({
-    lesson_id: 4
-})
+    lesson_id: 4,
+    reviewtext: "So, it's a Pokémon game this time. You certainly don't need me to tell you about this one, so instead of a mini-review I'll just talk about my own personal experiences with this series, along with giving a couple fun facts about the game you might not know.||I did not grow up with Pokémon, since it didn't come out in America until I was already in college. I did grow up with older Game Boy RPGs, such as Great Greed and the Final Fantasy Legend games, all of which I still love to this day, so when this hot new Game Boy RPG came out, I was down!||The quirky NPCs reminded me very much of Earthbound, and the gameplay was fun. I did really enjoy the game, especially since it gave me one of my earliest tastes of how we would use the Nintendo Switch. At the time, I had a Super Game Boy in addition to my handheld Game Boy. I would play the game at school between my classes, then bring it home, pop the cart in my Super NES, and play some more. This wasn't the very first time I would enjoy a game this way (I played Phantasy Star 4 half on vacation and half at home about a year prior,) and I loved the experience of having that versatility.||I do have one major issue with the Pokémon series, and it haunted me through my initial playthrough of Red, and then happened again when I played Platinum (the next entry I would get very far in,) and for the same reason. That reason is that it's too easy to screw yourself over near the end. Of course, the game isn't unwinnable, but it's very easy to get through the game with a team that's wholly inadequate for the Elite 4. I don't remember what my team in Red was, but I do remember that I was pretty ok in Platinum, except for the fact that I didn't have any Pokémon that could go up against a particularly difficult Pokémon at the end. I would've had to catch a Tentacruel and grind it for about 5-10 hours, and I wasn't willing to do that, so I stopped playing.||I have since played SoulSilver and Black, and finished those, and I managed to finish both, but only because I looked up a Let's Play of the games and used the same team the LPer did. This doesn't seem to me the way the games should be played, and they would be a lot more fun if it weren't so easy to necessitate a grind near the end, so this fact does knock the games' quality down several notches in my book.||Now that you think I suck at Pokémon, let's get to the fun facts. First is a bit of a misnomer about the series. Many people see 'Pokémon Blue' and think that it's exactly the same as the US Blue. It isn't. When the games were initially released in Japan, Red and Green were the first two that came out. Eight months later, Pokémon Blue, the first 'third version' came out, boasting new Pokémon graphics and some new text. The way the US releases were handled is to take the new graphics and script of Japanese blue and put them into Japanese red and green, and then rename green to blue. The names were kept the same as Japanese when FireRed and LeafGreen rolled around, rather than renaming the latter WaterBlue or some such.||Also in the anime, Ash and Gary were named after real people. Ash was Satoshi, named after Pokémon creator Satoshi Tajiri, and Gary is Shigeru, named after Shigeru Miyamoto. I guess Tajiri needed a rival, and appropriately enough for someone wanting to be the every best like no one ever was, he picked the person who might well be the greatest game creator of all time.||I do not have a complete copy of Japanese blue, but what you're seeing in that picture is a special box set sold when the Pokémon games went on sale on the 3ds eShop. It comes with a map of Kanto and a few other goodies. That card you see there has a code on the back redeemable for a download.",
+    screenshoturls: "https://i.imgur.com/T329yxN.png||https://i.imgur.com/C9P83Yq.png||https://i.imgur.com/EIhvQYs.png",
+    screenshottext: "The world of the localized Pokemon games seems to be slightly more technologically advanced than its Japanese counterpart. In Japanese, the main character has a Famicom, but the localization upgrades it to a Super NES.||See how I chose Charmander here? Never do that! The first major boss will be way too difficult if you do!||This old man is drunk in the Japanese version, and he can't move until he sobers up.",
+    })
 
 Release.create({
     gamesection_id: 4,
@@ -770,63 +595,8 @@ Otherpic.create({
     cover_id: 4
 })
 
-Paragraph.create({
-    gamesection_id: 4,
-    text: "So, it's a Pokémon game this time. You certainly don't need me to tell you about this one, so instead of a mini-review I'll just talk about my own personal experiences with this series, along with giving a couple fun facts about the game you might not know.",
-})
 
-Paragraph.create({
-    gamesection_id: 4,
-    text: "I did not grow up with Pokémon, since it didn't come out in America until I was already in college. I did grow up with older Game Boy RPGs, such as Great Greed and the Final Fantasy Legend games, all of which I still love to this day, so when this hot new Game Boy RPG came out, I was down!",
-})
 
-Paragraph.create({
-    gamesection_id: 4,
-    text: "The quirky NPCs reminded me very much of Earthbound, and the gameplay was fun. I did really enjoy the game, especially since it gave me one of my earliest tastes of how we would use the Nintendo Switch. At the time, I had a Super Game Boy in addition to my handheld Game Boy. I would play the game at school between my classes, then bring it home, pop the cart in my Super NES, and play some more. This wasn't the very first time I would enjoy a game this way (I played Phantasy Star 4 half on vacation and half at home about a year prior,) and I loved the experience of having that versatility.",
-})
-
-Paragraph.create({
-    gamesection_id: 4,
-    text: "I do have one major issue with the Pokémon series, and it haunted me through my initial playthrough of Red, and then happened again when I played Platinum (the next entry I would get very far in,) and for the same reason. That reason is that it's too easy to screw yourself over near the end. Of course, the game isn't unwinnable, but it's very easy to get through the game with a team that's wholly inadequate for the Elite 4. I don't remember what my team in Red was, but I do remember that I was pretty ok in Platinum, except for the fact that I didn't have any Pokémon that could go up against a particularly difficult Pokémon at the end. I would've had to catch a Tentacruel and grind it for about 5-10 hours, and I wasn't willing to do that, so I stopped playing.",
-})
-
-Paragraph.create({
-    gamesection_id: 4,
-    text: "I have since played SoulSilver and Black, and finished those, and I managed to finish both, but only because I looked up a Let's Play of the games and used the same team the LPer did. This doesn't seem to me the way the games should be played, and they would be a lot more fun if it weren't so easy to necessitate a grind near the end, so this fact does knock the games' quality down several notches in my book.",
-})
-
-Paragraph.create({
-    gamesection_id: 4,
-    text: "Now that you think I suck at Pokémon, let's get to the fun facts. First is a bit of a misnomer about the series. Many people see 'Pokémon Blue' and think that it's exactly the same as the US Blue. It isn't. When the games were initially released in Japan, Red and Green were the first two that came out. Eight months later, Pokémon Blue, the first 'third version' came out, boasting new Pokémon graphics and some new text. The way the US releases were handled is to take the new graphics and script of Japanese blue and put them into Japanese red and green, and then rename green to blue. The names were kept the same as Japanese when FireRed and LeafGreen rolled around, rather than renaming the latter WaterBlue or some such.",
-})
-
-Paragraph.create({
-    gamesection_id: 4,
-    text: "Also in the anime, Ash and Gary were named after real people. Ash was Satoshi, named after Pokémon creator Satoshi Tajiri, and Gary is Shigeru, named after Shigeru Miyamoto. I guess Tajiri needed a rival, and appropriately enough for someone wanting to be the every best like no one ever was, he picked the person who might well be the greatest game creator of all time.",
-})
-
-Paragraph.create({
-    gamesection_id: 4,
-    text: "I do not have a complete copy of Japanese blue, but what you're seeing in that picture is a special box set sold when the Pokémon games went on sale on the 3ds eShop. It comes with a map of Kanto and a few other goodies. That card you see there has a code on the back redeemable for a download."
-})
-
-Screenshot.create({
-    url: "https://i.imgur.com/T329yxN.png",
-    caption: "The world of the localized Pokemon games seems to be slightly more technologically advanced than its Japanese counterpart. In Japanese, the main character has a Famicom, but the localization upgrades it to a Super NES.",
-    gamesection_id: 4
-})
-
-Screenshot.create({
-    url: "https://i.imgur.com/C9P83Yq.png",
-    caption: "See how I chose Charmander here? Never do that! The first major boss will be way too difficult if you do!",
-    gamesection_id: 4
-})
-
-Screenshot.create({
-    url: "https://i.imgur.com/EIhvQYs.png",
-    caption: "This old man is drunk in the Japanese version, and he can't move until he sobers up.",
-    gamesection_id: 4
-})
 
 Japanesesection.create({
     lesson_id: 4,

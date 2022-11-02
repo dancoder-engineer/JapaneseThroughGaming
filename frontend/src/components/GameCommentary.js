@@ -5,12 +5,12 @@ import './styles/Lesson.css';
 
 function GameCommentary({sentData}){
     console.log(sentData)
-    const gameCopy = sentData.gameCopy
-    const screenshots = sentData.screenshots
+    
+    const captions = sentData.screenshottext
 
    // console.log(gameCopy)
-    let paragraphs = gameCopy.map((i, index) => <p key={index}>{i}</p>)
-    let screens = screenshots.map(i => <Screenshot screenshot={i} />)
+    let paragraphs = sentData.gameCopy.map((i, index) => <p key={index}>{i}</p>)
+    let screens = sentData.screenshoturls.map((i, index) => <Screenshot url={i} caption={captions[index]} key={index}/>)
 // 
 // 
 

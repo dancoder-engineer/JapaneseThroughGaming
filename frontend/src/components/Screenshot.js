@@ -1,12 +1,12 @@
 import React from "react";
 import './styles/Lesson.css';
 
-function Screenshot({screenshot}) {
+function Screenshot({url, caption}) {
 
     return (
         <div className="screen">
-            <img className="sideImg" src={screenshot.url} alt="screen" />
-            <p>{screenshot.caption}</p>
+            <img className="sideImg" src={url} alt="screen" />
+            <p>{caption}</p>
         </div>
     )
 }
