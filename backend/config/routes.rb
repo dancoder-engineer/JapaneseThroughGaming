@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :examples
   resources :vocabwords
   resources :japanesecopyparagraphs
-  resources :howtomakes
   resources :japanesesections
   resources :screenshots
   resources :paragraphs

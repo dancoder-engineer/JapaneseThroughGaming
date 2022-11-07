@@ -19,7 +19,7 @@ function LessonHub({lessons}) {
         fetch(lessonsurl)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+       //     console.log(data)
             formatSendToGameData(data)
             formatSendToCommentary(data)
             formatSendToJapaneseLesson(data)
@@ -47,8 +47,8 @@ function LessonHub({lessons}) {
       })
       }
 
-      function formatSendToCommentary(data) {
-        console.log(data)
+      function formatSendToCommentary(data) { console.log(data)
+     //   console.log(data)
         let gameCopy = data.gamesection.reviewtext.split("||")
         setSendToCommentary({
             gameCopy: gameCopy,
@@ -60,13 +60,13 @@ function LessonHub({lessons}) {
 
       function formatSendToJapaneseLesson(data) {
 
-
+        console.log(data)
         setSendToJapaneseLesson({
             lessonTitle: data.japanesesection.lessontitle,
             shortDescription: data.japanesesection.shortdescription,
-            howToMake: data.howtomakes.map(i => i.text),
+            howtoMake: data.japanesesection.howtomake,
             screenshot: data.japanesesection.screenshot,
-            mainCopy: data.japanesecopyparagraphs.map(i => i.text),
+            maincopy: data.japanesesection.japanesecopy,
             mainExample: data.examples[0],
             extraExamples: data.examples.slice(1,),
             vocabulary: data.vocabwords.map(i => [i.kanji, i.nokanji, i.english])

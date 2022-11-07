@@ -9,8 +9,8 @@ class LessonSerializer < ActiveModel::Serializer
     has_many :screenshots, through: :gamesection
 
   has_one :japanesesection
-    has_many :howtomakes, through: :japanesesection
-    has_many :japanesecopyparagraphs, through: :japanesesection
+   # has_many :howtomakes, through: :japanesesection
+   # has_many :japanesecopyparagraphs, through: :japanesesection
     has_many :examples, through: :japanesesection
     has_many :vocabwords, through: :japanesesection
 
@@ -27,8 +27,8 @@ class LessonSerializer < ActiveModel::Serializer
 
         japanesesection: {
              basicinfo: self.object.gamesection,
-             howtomakes: self.object.howtomakes,
-             japanesecopyparagraphs: self.object.japanesecopyparagraphs,
+          #   howtomakes: self.object.howtomakes,
+          #   japanesecopyparagraphs: self.object.japanesecopyparagraphs,
              examples: self.object.examples,
              vocabwords: self.object.vocabwords
         }

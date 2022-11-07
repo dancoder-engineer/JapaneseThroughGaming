@@ -65,6 +65,7 @@ function makeLessons(lessons) {
 
  
   setTitles( 
+
         lessons.map(i => { 
           
 
@@ -86,7 +87,7 @@ function makeLessons(lessons) {
 
   return (
     <div className="top">
-      <p className="centeredText">Dan's Japanese Page</p>
+      <p className="centeredText">Japanese through Retro Gaming </p>
     <Switch>
       <Route exact path="/">
           <MainMenu titles = {titles} paidHowFar={user.paidHowFar*5} user={user} />

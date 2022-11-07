@@ -7,6 +7,7 @@ function Login({url, getUserInfo}) {
     const [errorMessage, setErrorMessage] = useState("")
 
     function youGetMe() {
+        return 0
         fetch("/getme/")
         .then(res => res.json())
         .then(data => console.log(data))
@@ -73,7 +74,7 @@ function Login({url, getUserInfo}) {
         })
         .then(res => res.json())
         .then(data => { 
-            console.log(data)
+         //   console.log(data)
             let getUser = data
             if(data.error) {
                 setErrorMessage("User name or password incorrect.")               

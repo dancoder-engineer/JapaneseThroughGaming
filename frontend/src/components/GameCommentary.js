@@ -4,7 +4,7 @@ import './styles/Lesson.css';
 
 
 function GameCommentary({sentData}){
-    console.log(sentData)
+   // console.log(sentData)
     
     const captions = sentData.screenshottext
 

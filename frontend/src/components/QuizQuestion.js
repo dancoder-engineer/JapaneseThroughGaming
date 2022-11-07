@@ -30,7 +30,7 @@ function QuizQuestion({questionData, useKanji, questionType, questionNumber, han
 
 
     function restoreAnswer() {
-        console.log("A")
+    //    console.log("A")
         if (answers[questionNumber-1] !== null) {
             let box = document.querySelector("#box")
             box.value=answers[questionNumber-1]

@@ -6,10 +6,12 @@ function JapaneseLesson({japaneseCopy}) {
 
     console.log(japaneseCopy)
 
-    let howToMake = japaneseCopy.howToMake.map(i => <h3 className="centeredText" key={i}>{i}</h3>)
-    let lessonCopy= japaneseCopy.mainCopy.map((i, index) => <p key={index}>{i}</p>)
-    let truth = japaneseCopy.mainExample.wKanji === ""
-    let kanjiLine = "W/ Kanji:" + japaneseCopy.mainExample.wKanji 
+
+    let howToMake = japaneseCopy.howtoMake.includes("||") ? japaneseCopy.howtoMake.split("||").map(i => <h3 className="centeredText" key={i}>{i}</h3>) : <h3 className="centeredText" key="lhj">{japaneseCopy.howToMake}</h3>
+    let lessonCopy= japaneseCopy.maincopy.includes("||") ? japaneseCopy.maincopy.split("||").map((i, index) => <p key="kj">{i}</p>) : <p>{japaneseCopy.maincopy}</p>
+    let truth = japaneseCopy.mainExample.kanji === ""
+    let kanjiLine = japaneseCopy.mainExample.kanji !== "" ? "W/ Kanji: " + japaneseCopy.mainExample.kanji : null
+    let nokanjiLine = japaneseCopy.mainExample.nokanji !== "" ? "No Kanji: " + japaneseCopy.mainExample.nokanji : null
     let br = <br />
 
     let extraExamples = japaneseCopy.extraExamples.map(i => <ExtraExample extraExample={i} key={i.title} />)
@@ -20,9 +22,9 @@ function JapaneseLesson({japaneseCopy}) {
             {howToMake}
             <img src={japaneseCopy.screenshot} className="lessonScreenshot" alt="screenshot" />
             <p className="smallCenteredText">
-                {truth ? "" : kanjiLine}
+                {kanjiLine && kanjiLine}
                 {truth ? "" : br}
-                No Kanji: {japaneseCopy.mainExample.noKanji} <br />
+                {nokanjiLine && nokanjiLine} <br />
                 English: {japaneseCopy.mainExample.english}
             </p>
             {lessonCopy}

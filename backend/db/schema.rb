@@ -38,13 +38,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_12_013601) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "howtomakes", force: :cascade do |t|
-    t.text "text"
-    t.integer "japanesesection_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "japanesecopyparagraphs", force: :cascade do |t|
     t.text "text"
     t.integer "japanesesection_id"
@@ -57,6 +50,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_12_013601) do
     t.text "lessontitle"
     t.text "shortdescription"
     t.text "screenshot"
+    t.text "howtomake"
+    t.text "japanesecopy"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

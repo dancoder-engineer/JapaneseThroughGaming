@@ -1,9 +1,10 @@
 import React from "react"
 
 function ExtraExample({extraExample}){
+console.log(extraExample)
 
-    let truth = extraExample.wKanji === ""
-    let kanjiLine = "W/ Kanji:" + extraExample.wKanji
+    let kanjiLine = extraExample.kanji !== "" ? "W/ Kanji:" + extraExample.kanji : null
+    let nokanjiLine = extraExample.nokanji !== "" ? "No Kanji:" + extraExample.nokanji : null
     let br = <br />
 
     return (
@@ -16,9 +17,9 @@ function ExtraExample({extraExample}){
             </div>
             <div className="extraText">
             <p className="smallLeftText">
-                {truth ? "" : kanjiLine}
-                {truth ? "" : br}
-                No Kanji: {extraExample.noKanji} <br />
+                {kanjiLine && kanjiLine}
+                {kanjiLine && <br />}
+                {nokanjiLine && nokanjiLine} <br />
                 English: {extraExample.english}
             </p>
             </div>

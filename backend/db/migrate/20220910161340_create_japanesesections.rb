@@ -5,6 +5,8 @@ class CreateJapanesesections < ActiveRecord::Migration[7.0]
       t.text :lessontitle
       t.text :shortdescription
       t.text :screenshot
+      t.text :howtomake
+      t.text :japanesecopy
       t.timestamps
     end
   end

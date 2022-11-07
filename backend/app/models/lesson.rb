@@ -7,8 +7,8 @@ class Lesson < ApplicationRecord
         has_many :screenshots, through: :gamesection
 
     has_one :japanesesection
-        has_many :howtomakes, through: :japanesesection
-        has_many :japanesecopyparagraphs, through: :japanesesection
+ #       has_many :howtomakes, through: :japanesesection
+ #       has_many :japanesecopyparagraphs, through: :japanesesection
         has_many :examples, through: :japanesesection
         has_many :vocabwords, through: :japanesesection
 end
