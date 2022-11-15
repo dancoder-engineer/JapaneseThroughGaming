@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 
 
   get '/userbyname/:name', to:'users#byname'
-  get '/getme', to: 'users#getme'
+  get '/getme/', to: 'users#getme'
   get 'userquiz/:userid/:quizid', to:'userquizzes#userandquiz'
   post '/login', to:'users#login'
   

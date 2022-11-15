@@ -28,11 +28,11 @@ class UsersController < ApplicationController
     end
 
     def getme
-        if session[:user]
+        if session[:user_id]
             user = User.find_by(id: session[:user_id])
             render json: user, status: 200
         else
-            return render json: {}, status: 200
+            return render json: {error: "Not logged in"}, status: 200
         end
     end
 

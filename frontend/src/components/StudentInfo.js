@@ -25,8 +25,6 @@ function StudentInfo({loggedIn, user}) {
     if(loggedIn) {
         return(
             <div>
-                <p className="centeredText">Grade information for {user.userName}</p>
-                    {quizList}
                 <br />
                 <br />
                 <br />
@@ -38,3 +36,6 @@ function StudentInfo({loggedIn, user}) {
 }
 
 export default StudentInfo
+
+// <p className="centeredText">Grade information for {user.userName}</p>
+// {quizList}

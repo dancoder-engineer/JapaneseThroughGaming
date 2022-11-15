@@ -14,7 +14,7 @@ function MainMenuCard({titles, user}) {
     }, [])
 
     function youGetMe() {
-        fetch("/users/2")
+        fetch("/users/4")
         .then(res => res.json())
         .then(data => {//console.log(data)
             setUsr(data)

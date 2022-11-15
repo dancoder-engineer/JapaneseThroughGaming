@@ -14,25 +14,26 @@ class LessonSerializer < ActiveModel::Serializer
     has_many :examples, through: :japanesesection
     has_many :vocabwords, through: :japanesesection
 
-    def lessonObject
+    # def lessonObject
 
-      {
-        gamesection: {
-              basicinfo: self.object.gamesection,
-              cover: self.object.cover,
-              otherpics: self.object.otherpics,
-              paragraphs: self.object.paragraphs,
-              screenshots: self.object.screenshots
-            },
+    #   {
+    #     gamesection: {
+    #           basicinfo: self.object.gamesection,
+    #           cover: self.object.cover,
+    #           otherpics: self.object.otherpics,
+    #           paragraphs: self.object.paragraphs,
+    #           screenshots: self.object.screenshots
+    #         },
 
-        japanesesection: {
-             basicinfo: self.object.gamesection,
-          #   howtomakes: self.object.howtomakes,
-          #   japanesecopyparagraphs: self.object.japanesecopyparagraphs,
-             examples: self.object.examples,
-             vocabwords: self.object.vocabwords
-        }
+    #     japanesesection: {
+    #          basicinfo: self.object.gamesection,
+    #       #   howtomakes: self.object.howtomakes,
+    #       #   japanesecopyparagraphs: self.object.japanesecopyparagraphs,
+    #          examples: self.object.examples,
+    #          vocabwords: self.object.vocabwords
+    #     }
 
-      }
-    end
+    #   }
+    # end
+    
 end

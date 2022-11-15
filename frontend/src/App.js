@@ -18,7 +18,7 @@ function App() {
   const lessonsurl = "http://127.0.0.1:5000/lessons"
 
   let history = useHistory();
-  let [loggedIn, setLoggedIn] = useState(false)
+  let [loggedIn, setLoggedIn] = useState(true)
   let [user, setUser] = useState({quizzes: []})
   let [lessons, setLessons] = useState([])
   let [titles, setTitles] = useState([])
@@ -90,7 +90,7 @@ function makeLessons(lessons) {
       <p className="centeredText">Japanese through Retro Gaming </p>
     <Switch>
       <Route exact path="/">
-          <MainMenu titles = {titles} paidHowFar={user.paidHowFar*5} user={user} />
+          <MainMenu />
       </Route>
       <Route path="/lesson/:id">
           <LessonHub lessons = {lessons} />
@@ -110,11 +110,7 @@ function makeLessons(lessons) {
       </Route>
     </Switch>
     
-    <Switch>
-    <Route exact path="/">
-      <StudentInfo loggedIn={loggedIn} user={user}/>
-    </Route>
-    </Switch>
+
 
 
     </div>
@@ -122,3 +118,10 @@ function makeLessons(lessons) {
 }
 
 export default App;
+
+
+{/* <Switch>
+<Route exact path="/">
+  <StudentInfo loggedIn={loggedIn} user={user}/>
+</Route>
+</Switch> */}
