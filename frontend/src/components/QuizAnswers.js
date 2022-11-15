@@ -31,7 +31,7 @@ function QuizAnswers({answers, mcAnswers, quizData, allQuestions, useKanji}) {
         else { rightSpiel = "Sorry, that's not right. Look at the right answer and see if you can see why it's right."}
 
         return(
-        <div>
+        <div key={place}>
             <p id={place+1}>Question {place + 1}: {i.Question}<br />
             Correct Answer: {rightAnswer}<br />
             Your Answer: {yourAnswer}<br />

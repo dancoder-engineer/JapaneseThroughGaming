@@ -4,7 +4,7 @@ import './styles/Quiz.css'
 
 import './styles/MainMenu.css'
 
-function Register({url}) {
+function Register() {
 
 
 

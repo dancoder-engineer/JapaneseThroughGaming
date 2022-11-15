@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from "react"
 import './styles/MainMenu.css'
-import { NavLink, Switch, useHistory } from "react-router-dom"
+import { NavLink, useHistory } from "react-router-dom"
 
-function Login({url, getUserInfo}) {
+function Login() {
 
     const [errorMessage, setErrorMessage] = useState("")
+    const history = useHistory();
+    let user = null
 
     function youGetMe() {
         return 0
@@ -45,22 +47,22 @@ function Login({url, getUserInfo}) {
 
     }
 
-    function oldLogin(data){
+    // function oldLogin(data){
         
-            //    console.log(data)
-              let getUser = data.find(i => i.userName === up.userName)
-            //    console.log(getUser)
-                if (getUser === undefined) {
-                    document.querySelector("#errorMessage").innerHTML = "User Not Found"
-                    return 0
-                }
-                if (getUser.password !== up.password) {
-                    document.querySelector("#errorMessage").innerHTML = "Password Wrong"
-                    return 0
-                }
-                getUserInfo(getUser)
+    //         //    console.log(data)
+    //           let getUser = data.find(i => i.userName === up.userName)
+    //         //    console.log(getUser)
+    //             if (getUser === undefined) {
+    //                 document.querySelector("#errorMessage").innerHTML = "User Not Found"
+    //                 return 0
+    //             }
+    //             if (getUser.password !== up.password) {
+    //                 document.querySelector("#errorMessage").innerHTML = "Password Wrong"
+    //                 return 0
+    //             }
+    //             getUserInfo(getUser)
             
-    }
+    // }
 
     function tryToLogIn(e){
         e.preventDefault()
@@ -75,11 +77,11 @@ function Login({url, getUserInfo}) {
         .then(res => res.json())
         .then(data => { 
          //   console.log(data)
-            let getUser = data
             if(data.error) {
                 setErrorMessage("User name or password incorrect.")               
             } else {
-                getUserInfo(getUser)
+                user = data
+                history.push("/")
             }
         }
         )

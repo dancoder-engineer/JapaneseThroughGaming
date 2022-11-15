@@ -1,18 +1,32 @@
 import React, { useEffect, useState } from "react"
 import './styles/Quiz.css'
-import { useParams, NavLink } from "react-router-dom"
+import { useParams, useHistory, NavLink } from "react-router-dom"
 import QuizQuestion from "./QuizQuestion.js"
 import QuizAnswers from "./QuizAnswers.js"
 
-function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
+function Quiz() {
 
     const passingGrade = 65
-    let userUrl = url+userId
-    let userQuizData = {}
+
    // let userId = null
     ////console.log(userUrl)
-    
+    const history = useHistory();
     const params = useParams()
+    let user = null
+
+    useEffect(() => {
+        checkLoggedIn()
+    })
+
+    function checkLoggedIn() {
+        fetch('/getme/')
+        .then(res => res.json())
+        .then(data => {
+            if (data.error) { history.push("/") }
+            else { user = data }
+        })
+    }
+    
 
 
     //let quizData = lessons.find(i => { return i.id === parseInt(params.id) * 5 }).quizData
@@ -291,7 +305,7 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
         let uq = {
             quizNo: params.id,
             mcScore: getGrade(),
-            user_id: userId
+            user_id: user.id
         }
         //console.log(uq)
         
@@ -318,7 +332,7 @@ function Quiz({lessons, userName, url, userId, user, updateUserInfo}) {
 
     function gradeQuiz() {
 
-        fetch("/userquiz/" + userId + "/" + params.id)
+        fetch("/userquiz/" + user.id + "/" + params.id)
         .then(res => res.json())
         .then(data => {
             if (!data) { createNewQuiz(data) }
