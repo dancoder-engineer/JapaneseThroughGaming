@@ -96,13 +96,13 @@ function makeLessons(lessons) {
           <LessonHub />
       </Route>
       <Route path="/quiz/:id">
-          <Quiz lessons={lessons} userName={user.userName} url={url} userId={user.id} user={user} updateUserInfo={updateUserInfo} />
+          <Quiz userId={user.id} user={user} />
       </Route>
       <Route path="/login">
-          <Login url ={url} getUserInfo={getUserInfo} />
+          <Login getUserInfo={getUserInfo} />
       </Route>
       <Route path="/register">
-        <Register url={url} />
+        <Register />
       </Route>
 
       <Route path="/peer">
