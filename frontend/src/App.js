@@ -1,13 +1,11 @@
 import './App.css';
-import React, {useState, useEffect} from "react"
-import { Route, Switch, useHistory } from "react-router-dom"
-//import { lessons } from "./data/lessons.js"
+import React from "react"
+import {Route, Switch} from "react-router-dom"
 import MainMenu from "./components/MainMenu.js"
 import LessonHub from "./components/LessonHub.js"
 import Quiz from "./components/Quiz.js"
 import Login from "./components/Login.js"
 import Register from "./components/Register.js"
-import StudentInfo from "./components/StudentInfo.js"
 
 function App() {
 
