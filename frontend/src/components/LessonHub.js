@@ -5,8 +5,8 @@ import JapaneseLesson from "./JapaneseLesson.js"
 import './styles/Lesson.css';
 import { useParams, NavLink, Switch, Route } from "react-router-dom"
 
-function LessonHub({lessons}) {
-
+function LessonHub() {
+    let lessons = null
     const [lesson, setLesson] = useState({})
     const [sendToGameData, setSendToGameData] = useState(null)
     const [sendToCommentary, setSendToCommentary] = useState(null)
@@ -20,6 +20,7 @@ function LessonHub({lessons}) {
         .then(res => res.json())
         .then(data => {
        //     console.log(data)
+            lessons = data
             formatSendToGameData(data)
             formatSendToCommentary(data)
             formatSendToJapaneseLesson(data)

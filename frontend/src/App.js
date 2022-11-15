@@ -93,7 +93,7 @@ function makeLessons(lessons) {
           <MainMenu />
       </Route>
       <Route path="/lesson/:id">
-          <LessonHub lessons = {lessons} />
+          <LessonHub />
       </Route>
       <Route path="/quiz/:id">
           <Quiz lessons={lessons} userName={user.userName} url={url} userId={user.id} user={user} updateUserInfo={updateUserInfo} />
