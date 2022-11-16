@@ -51,7 +51,8 @@ function makeTitles(lessons) {
    //)
 }
 
-function makeCards(titles) {
+function makeCards(titles) { 
+    if (!user) {return 0}
     let canSeeTitles = titles.filter( i => i.id <= user.paidHowFar)
     let tmpCards = canSeeTitles.map(i => <MainMenuCard key={i.id} titles={i} user={user} /> )
     setCards(tmpCards)
