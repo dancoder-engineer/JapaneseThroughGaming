@@ -14,7 +14,7 @@ function MainMenuCard({titles, user}) {
     }, [])
 
     function youGetMe() {
-        fetch("/users/4")
+        fetch("/getme/")
         .then(res => res.json())
         .then(data => {//console.log(data)
             setUsr(data)
@@ -40,7 +40,8 @@ function MainMenuCard({titles, user}) {
     else {
         if (usr) {
      if (Object.keys(usr.userquizzes).length < (titles.id / 5)) { 
-    //    if (3 > 1) { console.log(quizId.split("z")[1])
+
+
             link = (
             <div className="quizData">
                 <br /><br /><br /><br /><br />
@@ -52,14 +53,15 @@ function MainMenuCard({titles, user}) {
 
     else { 
 
-            let qId = quizId.split("z")[1]
-            qId -= 1
+
+            let qId = parseInt(quizId.split("z")[1])
+            let quizData = (usr.userquizzes.find(i => i.quizNo === qId))
 
             link = (
             <div className="quizData">
                 <br /><br />
                 {usr && (<p>Quiz taken.<br />
-                Grade: {usr["userquizzes"][qId]["mcScore"]}%<br />
+                Grade: {quizData.mcScore}%<br />
                 </p>) }
                 <NavLink to={`/quiz/${titles.id / 5}/`}>Retake Quiz</NavLink>
                 <p>Warning: Retaking the quiz will erase all current records upon grading.</p>
