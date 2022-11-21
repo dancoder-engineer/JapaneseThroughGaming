@@ -360,7 +360,7 @@ Cover.create({
 
 Otherpic.create({
     pic: "https://imgur.com/f5uyish.jpg",
-    caption: "Despite being made all the way back in 1993, in 'creamed spinach color' (in the immortal words of the competition's advertising,) Link's Awakening stands as a strong competitor for the title os best Zelda game to this day.",
+    caption: "Despite being made all the way back in 1993, in 'creamed spinach color' (in the immortal words of the competition's advertising,) Link's Awakening stands as a strong competitor for the title of best Zelda game to this day.",
     cover_id: 3
 })
 
